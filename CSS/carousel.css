@@ -1,0 +1,145 @@
+.carousel {
+    width: 100%;
+    max-width: 800px;
+    margin: 50px auto;
+    overflow: hidden;
+    position: absolute;
+    top: 170%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.slide-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    flex: 0 0 100%;
+    padding: 30px 70px;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 25px;
+    opacity: 0;
+    background-color: rgba(40, 40, 40, .5);
+    transition: opacity 0.5s ease, transform 0.5s ease, background-color 0.3s ease;
+}
+
+.slide:hover {
+    background-color: rgba(138, 43, 226, 0.5);
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 1;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: rgba(138, 43, 226, 0.5);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+.worklink {
+    max-width: 56px;
+    position: absolute;
+    left: 60px;
+    bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 1px;
+    filter: invert(100%);
+    transition: transform 0.3s ease; /* Changed from rotate to transform */
+}
+
+.worklink:hover {
+    animation: spinAnimation 0.6s ease forwards;
+}
+
+@keyframes spinAnimation {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    30% {
+        transform: rotate(20deg);
+    }
+    70% {
+        transform: rotate(-20deg);
+    }
+}
+
+.made-with {
+    position: absolute;
+    right: 60px;
+    bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.made-with-icons {
+    display: flex;
+    align-items: center;
+}
+
+.made-with-icons img{
+    margin-left: 10px;
+    max-width: 50px;
+    height: auto;
+    transition: transform 0.3s ease; /* Changed from rotate to transform */
+
+}
+
+.made-with-icons img:hover{
+
+    transform: scale(1.2);
+    
+}
+
+.slide p{
+    margin-bottom: 50px;
+}
+
+@media screen and (max-width: 800px) {
+    .carousel {
+        width: 90%;
+        top: 175%;
+
+    }
+
+    .slide {
+        padding: 20px;
+    }
+
+    .worklink {
+        left: 10px;
+        right: auto;
+    }
+
+    .made-with {
+        right: 10px;
+        bottom: 10px;
+        padding: 5px;
+        justify-content: center;
+    }
+
+}

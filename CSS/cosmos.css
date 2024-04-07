@@ -1,0 +1,110 @@
+#cosmic-cursor {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    pointer-events: none;
+    /* Ensures cursor doesn't interfere with other elements */
+    z-index: 9999;
+    /* Ensures cursor is on top of other elements */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow:
+        0 0 5px #ffcc00,
+        0 0 10px #ff9900,
+        0 0 15px rgba(255, 153, 0, 0.5);
+    /* Box-shadow creates the gradient border effect */
+    animation: pulse 2s infinite alternate ease-in-out;
+    /* Animation properties */
+}
+
+@keyframes pulse {
+    from {
+        box-shadow:
+            0 0 5px #ffcc00,
+            0 0 10px #ff9900,
+            0 0 15px rgba(255, 153, 0, 0.5);
+    }
+
+    to {
+        box-shadow:
+            0 0 25px #ffcc00,
+            0 0 30px #ff9900,
+            0 0 35px rgba(255, 153, 0, 0.5);
+    }
+}
+
+.middle-bar {
+    margin: -2.5px;
+    width: 5px;
+    height: 30px;
+    background:
+        radial-gradient(circle at 50% 50%, #ffcc00 20%, #ff9900 80%, rgba(255, 153, 0, 0.5) 90%) border-box;
+    animation: MainBarAnimation 1s infinite alternate ease-in-out;
+}
+
+.side-bar {
+    width: 5px;
+    height: 15px;
+    background:
+        radial-gradient(circle at 50% 50%, #ffcc00 20%, #ff9900 80%, rgba(255, 153, 0, 0.5) 90%) border-box;
+    animation: SideBarAnimation 1s infinite alternate ease-in-out;
+}
+
+.side-bar:nth-child(2) {
+    margin-left: 8px;
+    /* Adjusted margin instead of left and right positioning */
+    margin-right: 8px;
+    /* Adjusted margin instead of left and right positioning */
+}
+
+@keyframes SideBarAnimation {
+    0% {
+        height: 15px;
+    }
+
+    50% {
+        height: 30px;
+    }
+
+    100% {
+        height: 15px;
+    }
+}
+
+@keyframes MainBarAnimation {
+    0% {
+        height: 30px;
+    }
+
+    50% {
+        height: 15px;
+    }
+
+    100% {
+        height: 30px;
+    }
+}
+
+#click-text {
+    position: absolute;
+    margin-left: 50px;
+    margin-top: 20px;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle at 50% 50%, #ffcc00 20%, #ff9900 80%, rgba(255, 153, 0, 0.5) 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.fade-out {
+    opacity: 1;
+    transition: opacity 4s ease-in-out;
+
+}
+
+.fade-out.active {
+    opacity: 0;
+}
+

@@ -1,0 +1,79 @@
+:root {
+  
+    --star-color: #fff;
+    --star-size-min: 1px;
+    --star-size-max: 3px;
+    --star-margin: 5px;
+    --toggle-width: 55px;
+    --toggle-height: 25px;
+  }
+
+  .toggle-container {
+    cursor: url('pointer.png'), none, !important;
+    display: inline-block;
+    position: relative;
+  }
+
+  .toggle-checkbox {
+    display: none;
+  }
+
+  .toggle-label {
+    display: inline-block;
+    width: var(--toggle-width);
+    height: var(--toggle-height);
+    background-color: #ddd;
+    border-radius: calc(var(--toggle-height) / 2);
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease-in-out; 
+  }
+
+  .toggle-label:hover{
+      background-color: blueviolet;
+  }
+
+  .stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .star {
+    background-color: var(--star-color);
+    position: absolute;
+    border-radius: 50%;
+    animation: twinkle 5s infinite linear, moveStars 5s infinite linear;
+    opacity: 0.8;
+  }
+
+  .toggle-checkbox:checked + .toggle-label .star {
+    animation-play-state: paused;
+  }
+
+  @keyframes moveStars {
+0% {
+  transform: translate(0, 0) rotate(0deg); /* Initial position and rotation */
+}
+50% {
+  transform: translate(5px, 5px) rotate(180deg); /* Random movement and rotation */
+}
+100% {
+  transform: translate(0, 0) rotate(360deg); /* Back to initial position and rotation */
+}
+}
+
+
+  @keyframes twinkle {
+    0% {
+      opacity: 0.8;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.8;
+    }
+  }

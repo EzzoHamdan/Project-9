@@ -1,0 +1,237 @@
+:root {
+  --hover-alpha: 0;
+  --blur-value: 0;
+  /* Initial value */
+
+  --star-color: rgba(255, 255, 255, var(--hover-alpha));
+  --star-size-min: 1px;
+  --star-size-max: 3px;
+  --star-margin: 5px;
+  --toggle-width: 60px;
+  --toggle-height: 26px;
+
+}
+
+.navbar {
+  visibility: visible;
+  display: flex;
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backdrop-filter: blur(var(--blur-value)); /* Adjust blur strength as needed */
+  background-color: rgba(40, 40, 40, var(--hover-alpha)) !important;
+  /* Initial opacity set to fully transparent */
+  padding: 20px 0;
+  transition: background-color 0.5s ease-in-out, padding 0.5s ease-in-out, opacity 0.5s ease-in-out, visibility 1s ease-in-out;
+  /* Add smooth transition for opacity and padding change */
+  z-index: 9997;
+  /* Ensure navbar stays on top */
+}
+
+.navbar:hover {
+  background-color: rgba(255, 255, 255, var(--hover-alpha)) !important;
+  /* Change opacity on hover */
+  padding: 25px 0;
+  /* Adjust padding on hover */
+}
+
+.navbar:hover a {
+
+  color: #000 !important;
+  font-size: 1.6rem;
+}
+
+.navbar a {
+  font-family: 'astron-boy';
+  color: rgba(255, 255, 255, 0);
+  /* Set default link color */
+  position: relative;
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 1.5rem;
+  transition: color 0.3s, font-size 0.5s ease-in-out;
+  /* Add smooth transition for color change */
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  /* Adjust the thickness of the line as needed */
+  background-color: rgb(138, 43, 226);
+  transition: width 0.3s ease;
+}
+
+.hidden {
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+.navbar a:hover {
+  color: rgb(138, 43, 226) !important;
+  /* Change link color on hover */
+}
+
+.topa {
+  float: right;
+}
+
+.navbar::after {
+  content: '';
+  /* Required for pseudo-elements */
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  /* Adjust this value to control the distance of the line from the text */
+  width: 100%;
+  /* Make the line span the width of the anchor */
+  height: 2px;
+  /* Adjust the thickness of the line */
+  background-color: transparent;
+  /* Initially transparent */
+  transition: background-color 0.3s;
+  /* Smooth transition for color change */
+}
+
+.navbar:hover::after {
+  background-color: rgb(138, 43, 226);
+  /* Change color on hover */
+}
+
+@media screen and (max-width: 715px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .top-links,
+  .bottom-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .top-links {
+    margin-bottom: 10px;
+  }
+
+  .navbar a,
+  .toggle-container {
+    margin: 0 5px;
+  }
+
+  .navbar a {
+    font-size: 1.3rem !important;
+  }
+  .navbar a:hover {
+    font-size: 1.4rem !important;
+  }
+
+  .toggle-container {
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transform: scale(1);
+  }
+}
+
+
+
+
+
+
+.toggle-container {
+
+  display: inline-block;
+  position: relative;
+}
+
+.toggle-checkbox {
+  display: none;
+}
+
+.toggle-label {
+  display: inline-block;
+  opacity: var(--hover-alpha);
+  width: var(--toggle-width);
+  height: var(--toggle-height);
+  background-color: rgb(40, 40, 40);
+  border-radius: calc(var(--toggle-height) / 2);
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.toggle-label:hover {
+  background-color: blueviolet;
+
+}
+
+.stars {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 100%;
+  height: 100%;
+}
+
+.star {
+  background-color: var(--star-color);
+  position: absolute;
+  border-radius: 50%;
+  animation: moveStars 5s infinite linear, twinkle 5s infinite linear;
+}
+
+.toggle-checkbox:checked+.toggle-label .star {
+  animation-play-state: paused;
+}
+
+@keyframes moveStars {
+  0% {
+    transform: translate(-2px, 2px) rotate(0deg);
+    /* Initial position and rotation */
+  }
+
+  50% {
+    transform: translate(3px, -3px) rotate(180deg);
+    /* Random movement and rotation */
+  }
+
+  100% {
+    transform: translate(-2px, 2px) rotate(360deg);
+    /* Back to initial position and rotation */
+  }
+}
+
+
+@keyframes twinkle {
+  0% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 0.8;
+  }
+
+  75% {
+    opacity: 0.5;
+  }
+
+  90%, 100% {
+    opacity: 1;
+  }
+}

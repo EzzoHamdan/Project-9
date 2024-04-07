@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8"> <!-- Character encoding set to UTF-8 -->
+    <link rel="shortcut icon" href="Icons/logo.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive viewport settings -->
+    <title>Portfolio Showcase</title> <!-- Title of the webpage -->
+
+    <link rel="stylesheet" href="CSS/Styles.css"> 
+    <link rel="stylesheet" href="CSS/Layout.css"> 
+    <link rel="stylesheet" href="CSS/navigator.css">
+    <link rel="stylesheet" href="CSS/starrush.css">
+    <link rel="stylesheet" href="CSS/carousel.css">
+    <link rel="stylesheet" href="CSS/cosmos.css">
+
+    <!-- <link rel="stylesheet" href="star.css"> -->
+
+    <script>
+
+
+        window.onbeforeunload = function () {
+            if ('scrollRestoration' in history) {
+                history.scrollRestoration = 'manual';
+            }
+            window.scrollTo(0, 0);
+        };
+
+
+    </script>
+
+</head>
+
+<body>
+
+    <div id="cosmic-cursor" class="fade-out">
+        <div class="side-bar"></div>
+        <div class="middle-bar"></div>
+        <div class="side-bar"></div>
+    </div>
+    <h6 id="click-text" class="fade-out">Click anywhere to activate the audio</h6>
+
+    <script>
+
+        document.addEventListener("mousemove", function (e) {
+            const cursor = document.querySelector("#cosmic-cursor");
+            cursor.style.top = (e.pageY - 25) + "px";
+            cursor.style.left = (e.pageX - 25) + "px";
+
+            const clickText = document.querySelector("#click-text");
+            clickText.style.top = (e.pageY + 25) + "px";
+            clickText.style.left = (e.pageX - 50) + "px";
+        });
+
+        // Simulate loading by hiding the cosmic loader after a certain time (e.g., 10 seconds)
+        window.onload = function () {
+            setTimeout(function () {
+                document.getElementById('cosmic-cursor').classList.add('active');
+                document.getElementById('click-text').classList.add('active');
+
+
+            }, 1000); // Adjust the time as needed (4)
+        };
+    </script>
+
+
+
+
+
+    <div id="intro" class="fade-in"> <!-- Introductory section -->
+        <h1 class="opening">Welcome! My name is Ezzo</h1> <!-- Heading -->
+        <p>I am a Computer Science <a href="#" id="coloring">Student</a> who is eager to grow and learn as a junior
+            developer</p> <!-- Paragraph with a custom designed hyperlink -->
+        <p id="portfolioMessage">- The Portfolio is under development, please click on the coloring word to proceed
+            -
+        </p>
+    </div>
+
+
+    <script>
+        // Function to display the paragraph after a delay
+        function displayParagraph() {
+            document.getElementById("portfolioMessage").style.display = "block"; // Make the paragraph visible
+        }
+
+        // Set a timeout to call the displayParagraph function after 10 seconds (10000 milliseconds)
+        setTimeout(displayParagraph, 10000);
+    </script>
+
+    <script src="JavaScript/nav.js"></script>
+
+    <audio id="repeat-audio" src="Media/Filaments.mp3" preload="auto" autoplay loop></audio>
+
+    <div class="navbar" id="navbar">
+        <!-- Your navigation links here -->
+        <div class="top-links">
+            <a href="#link1">My education</a>
+            <a href="#link2">Let's have a talk!</a>
+            <a href="#">Resume/CV &#40;PDF File&#41;</a>
+        </div>
+
+        <div class="bottom-links">
+            <a class="topa" href="#">Return to top</a>
+            <div class="toggle-container topa">
+                <input type="checkbox" id="toggle-checkbox" class="toggle-checkbox">
+                <label for="toggle-checkbox" class="toggle-label">
+                    <div class="stars"></div>
+                </label>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div id="featuredw" class="work hid slide-down">
+        <h1>Featured projects</h1>
+        <p>Showcased projects were created either as part of university coursework or solely for the purposes
+            of personal learning and professional development.</p>
+
+    </div>
+
+    <div id="featuredc" class="carousel hid slide-down">
+        <div class="slide-container">
+            <div class="slide">
+                <h2>Project 9</h2>
+                <p>Ma pièce de résistance. What initially began as a space-related page has transformed into my
+                    portfolio. 'Project 9' has emerged as a pivotal achievement, despite eight previous projects
+                    where I
+                    made several attempts to create personal pages, portfolios, and CSS experiments. Unfortunately,
+                    all
+                    eight were lost. However, Project 9 will stand as a testament to continuous development
+                    and
+                    ongoing growth.
+                </p>
+                <div class="worklink">
+
+                    <a href=""><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+                            width="50" height="50" /></a>
+
+                </div>
+                <div class="made-with">
+                    <h4>Made with:</h4>
+                    <div class="made-with-icons">
+
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-plain-wordmark.svg"
+                            width="50" height="50" />
+
+
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-plain-wordmark.svg"
+                            width="50" height="50" />
+
+
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg"
+                            width="50" height="50" />
+
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <h2>Find the Shipwreck</h2>
+                <p>The 'Find the Shipwreck' game was created as a terminal-based project to demonstrate my
+                    proficiency
+                    in Data Structures during my second semester of sophomore year. It showcases core concepts
+                    learned
+                    in the course.
+                </p>
+                <div class="worklink">
+
+                    <a href="https://github.com/EzzoHamdan/ShipGame"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+                            width="50" height="50" /></a>
+
+                </div>
+                <div class="made-with">
+                    <h4>Made with:</h4>
+                    <div class="made-with-icons">
+
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
+                            width="50" height="50" />
+
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <h2>University Gate</h2>
+                <p>The 'University Gate' project was created as a university webpage for the Web Application
+                    Development
+                    2 course during my first semester of junior year. It demonstrates proficiency in multiple
+                    ASP.NET
+                    MVC aspects, including backend development.</p>
+                <div class="worklink">
+
+                    <a href="https://github.com/EzzoHamdan/UniGate"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+                            width="50" height="50" /></a>
+
+                </div>
+                <div class="made-with">
+                    <h4>Made with:</h4>
+                    <div class="made-with-icons">
+
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-plain-wordmark.svg"
+                            width="50" height="50" />
+
+
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original-wordmark.svg"
+                            width="50" height="50" />
+
+
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg"
+                            width="50" height="50" />
+
+
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dotnetcore/dotnetcore-original.svg"
+                            width="50" height="50" />
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+    </div>
+
+
+
+    <script src="JavaScript/carousel.js"></script>
+
+    <script>
+
+        const repeatAudio = document.getElementById("repeat-audio");
+        const toggleCheckbox = document.getElementById("toggle-checkbox");
+
+        repeatAudio.play();
+
+
+        document.addEventListener("click", function () {
+
+            if (repeatAudio.played.length === 0) {
+                repeatAudio.play();
+            }
+
+            // Remove the event listener to prevent multiple playbacks
+            document.removeEventListener("click", arguments.callee);
+        });
+
+        // Toggle play/pause for the repeat audio based on checkbox state
+        toggleCheckbox.addEventListener("change", () => {
+            if (toggleCheckbox.checked) {
+                repeatAudio.pause();
+            } else {
+                repeatAudio.play();
+            }
+        });
+    </script>
+
+    <script src="JavaScript/cursor.js"></script> <!-- Link to external JavaScript file for the custom cursor -->
+
+    <script src="JavaScript/stars.js"></script> <!-- Link to external JavaScript file for the particle effects -->
+
+    <section id="particle-container" class="starssection">
+
+    </section> <!-- Section for displaying particle effects -->
+
+    <script>
+        document.getElementById("coloring").addEventListener("click", function () {
+            // Calculate the vertical height of the viewport
+            const viewportHeight = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+            // Specify the duration for the scroll animation (in milliseconds)
+            const duration = 1000; // Adjust this value to your preference
+
+            // Scroll to 125vh below with a smooth animation and specified duration
+            window.scrollTo({
+                top: viewportHeight * 1.15,
+                behavior: 'smooth',
+                duration: duration
+            });
+            document.body.style.overflowY = 'auto';
+        });
+    </script>
+
+    <section class="normalsection">
+
+        <img src="Pictures/sky.jpg" id="sky">
+        <img src="Pictures/moon.png" id="moon">
+        <img src="Pictures/newmount.png" id="mount">
+        <img src="Pictures/newroad.png" id="road">
+        <h2 id="text">The person behind pixels</h2>
+
+    </section>
+
+    <script>
+
+        let sky = document.getElementById('sky');
+        let moon = document.getElementById('moon');
+        let mount = document.getElementById('mount');
+        let road = document.getElementById('road');
+        let text = document.getElementById('text');
+
+        window.addEventListener('scroll', function () {
+            var value = window.scrollY;
+            var tvalue = value - 1000;
+            sky.style.top = -value * 0.10 + 'px';
+            moon.style.left = (-value + 400) * 0.5 + 'px';
+            mount.style.top = -value * 0.13 + 'px';
+            road.style.top = -value * 0.05 + 'px';
+            text.style.bottom = tvalue * 0.5 + 'px';
+
+        })
+
+    </script>
+
+    <div class="line" id="link1">
+
+    </div>
+
+
+    <div id="hidE" class="hid slide-up personnel-info">
+        <h1>Education</h1>
+    </div>
+    <div class="container">
+        <div class="hid slide-left card">
+            <img src="Icons/Unilogo.png" alt="">
+            <div class="card-content">
+                <h2>Al-Ahliyya Amman University</h2>
+                <ul>
+                    <li>Bachelor of Science in Computer Science</li>
+                    <li>2021-2025 / Enrolled</li>
+                    <li>Achieved a GPA of 3.71 out of 4.00, surpassing the threshold for excellence in academic
+                        achievement.</li>
+                    <li>Maintained a strong academic record, consistently ranking among the top students in my cohort.
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="hid slide-right card">
+            <img src="Icons/language.png" alt="">
+            <div class="card-content">
+                <h2>Languages</h2>
+                <ul>
+                    <li>Bilingual Arabic & English: Proficient in both languages from upbringing and
+                        academic/professional experiences.</li>
+                    <li>Français de travail limité : Actuellement au niveau B1, améliorant activement ma maîtrise de la
+                        langue.</li>
+                    <li>I am deeply passionate about languages, art, and culture, embodying a keen appreciation for
+                        diverse expressions of human creativity and identity.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <section class="sectiond">
+
+        <video preload="auto" autoplay loop muted>
+            <source src="Media/glitch.mp4" type="video/mp4">
+
+        </video>
+        <div class="blur-overlay">
+
+        </div>
+
+    </section>
+
+    <div class="line2" id="link2">
+
+    </div>
+
+    <br>
+
+    <section class="sectionf">
+        <div class="blur-overlay2">
+
+        </div>
+
+    </section>
+
+    <script>
+
+        let lastRandomNumber = -1;
+
+        function getRandomImage() {
+            let randomNumber;
+            do {
+                randomNumber = Math.floor(Math.random() * 9) + 1;
+            } while (randomNumber === lastRandomNumber);
+            lastRandomNumber = randomNumber;
+            return `Pictures/${randomNumber}.jpg`;
+        }
+
+        function changeBackground() {
+            const randomImage = getRandomImage();
+            document.querySelector('.sectionf').style.backgroundImage = `url(${randomImage})`;
+        }
+
+        // Change background every 10 seconds
+        setInterval(changeBackground, 10000); // Change the time as per your preference
+
+    </script>
+
+    <div class="about">
+        <div class="hid slide-left left">
+            <h1>My Skills</h1>
+
+            <div class="sqrleft">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-plain-wordmark.svg" />
+
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-plain-wordmark.svg" />
+
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg" />
+
+
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-plain.svg" />
+
+                <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original-wordmark.svg" />
+
+                <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg" />
+
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg" />
+
+                <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg" />
+
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-plain.svg" />
+
+                <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dotnetcore/dotnetcore-original.svg" />
+
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original-wordmark.svg" />
+
+                <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" />
+
+
+            </div>
+
+        </div>
+        <div class="hid slide-right right">
+            <div class="square">
+                <h1>Let's have a talk!</h1>
+                <p>I am open to explore all wide range of projects but I am particularly drawn to those that offer
+                    impactful solutions adorned with dynamic brilliance. If you have any project in mind, I am eager to
+                    learn more and explore new opportunities.
+                </p>
+
+            </div>
+            <div class="sqrlinks">
+                <a href="https://www.linkedin.com/in/ezzaldeen-hamdan-709415116"><img src="Icons/linkedin.png" alt=""></a>
+                <a href="https://github.com/EzzoHamdan"><img src="Icons/github.png" alt=""></a>
+            </div>
+            <div id="middletextfosquare" class="square">
+
+                <p>This portfolio was started during my second year as a sophomore and has been under continuous
+                    development ever since.</p>
+                <p>All of the materials utilized in this project are copyright free. If it turns out otherwise, please
+                    reach out for removal.</p>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="line2">
+
+    </div>
+
+    <section class="sectionfinale">
+        <div>
+            <a><img src="Icons/image2.png" id="rush"></a>
+            <p style="font-family: pw-world;">Project 9<br>All rights reserved<br>2023 - <span id="currentYear"></span>
+            </p>
+        </div>
+    </section>
+    <script>
+        //Displaying the year in the HTML document
+        document.getElementById("currentYear").innerHTML = new Date().getFullYear();
+    </script>
+
+    <script src="JavaScript/starrush.js"></script>
+
+
+    <script>
+        window.addEventListener('scroll', function () {
+            var navbar = document.getElementById('navbar');
+            var scrollPosition = window.scrollY;
+
+            // Define the scroll threshold where the navbar stops being fixed
+            var scrollThreshold = 3800; // Adjust this value as needed
+
+            if (scrollPosition > scrollThreshold) {
+                navbar.classList.add('hidden'); // Add the 'hidden' class
+
+            } else {
+                navbar.classList.remove('hidden'); // Remove the 'hidden' class
+            }
+
+        });
+    </script>
+
+    <script>
+        window.addEventListener('scroll', function () {
+            var sections = document.querySelectorAll('.hid');
+            var positionFromTop = window.scrollY;
+
+            if (positionFromTop > 750) {
+                var featuredw = document.getElementById('featuredw');
+                var featuredc = document.getElementById('featuredc');
+                featuredw.classList.add('visibleforf');
+                featuredc.classList.add('visibleforf');
+
+                setTimeout(function () {
+                    featuredw.classList.remove('hid');
+                    featuredc.classList.remove('hid');
+                }, 3000);
+            }
+            if (positionFromTop > 2150) {
+                var title = document.getElementById('hidE');
+                title.classList.add('visibleforf');
+
+                setTimeout(function () {
+                    title.classList.remove('hid');
+                }, 3000);
+            }
+
+            if (positionFromTop > 2100) {
+                sections.forEach(function (section) {
+                    if (positionFromTop > section.offsetTop - window.innerHeight / 2) {
+                        section.classList.add('visible');
+                        title.classList.add('visibleforf')
+
+                        // Add a setTimeout function to remove 'hid' class after 3 seconds
+                        setTimeout(function () {
+                            section.classList.remove('hid');
+                            title.classList.remove('hidE');
+
+                        }, 3000); // 3000 milliseconds = 3 seconds
+                    }
+                });
+            }
+        });
+
+    </script>
+
+
+
+</body>
+
+</html>

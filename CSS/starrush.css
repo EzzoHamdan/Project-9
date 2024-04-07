@@ -1,0 +1,48 @@
+.starrush {
+    position: absolute;
+    width: 2px;
+    border-radius: 50%;
+    background: linear-gradient(-45deg, rgba(255, 255, 255, 0), white, rgba(255, 255, 255, 0));
+    filter: drop-shadow(0 0 6px white);
+    animation: shining 5s ease-in-out;
+    z-index: 100;
+}
+.starrush::before,
+.starrush::after {
+    content: "";
+    position: absolute;
+    top: calc(50%);
+    right: 0;
+    height: 2px;
+    background: linear-gradient(-45deg, rgba(255, 255, 255, 0), white, rgba(255, 255, 255, 0));
+    transform: translateX(50%) rotateZ(45deg);
+    border-radius: 100%;
+    animation: shining 5s ease-in-out;
+}
+
+.starrush::after {
+    transform: translateX(50%) rotateZ(-45deg);
+}
+@keyframes shining {
+    0% {
+        width: 0;
+    }
+    
+    10%{
+        opacity: 1;
+        width: 25px;
+    }
+
+    50% {
+        width: 50px;
+    }
+    90%{
+        opacity: 0;
+        width: 25px;
+
+    }
+
+    100% {
+        width: 0;
+    }
+}
