@@ -13,4 +13,4 @@ In conclusion, the journey detailed above represents not only a mastery of techn
 
 ## Updates Section:
 
-- **Version 1.1:** Enhancing professionalism by grouping related files and editing the links behavior and guarantee no changes appear to the URL whatsoever. The version also activated the "Resume/CV (PDF File)." Users now can download copies of the CV directly. Finally, the version enhanced the vocabulary used in the texts for estra clarity.
+- **Version 1.1:** Enhancing professionalism by grouping related files and editing link behavior to ensure no changes appear in the URL whatsoever. Additionally, this version activated the 'Resume/CV (PDF File)' feature, allowing end-users to download copies of the CV directly. Finally, the version improved the vocabulary used in the texts for extra clarity.
