@@ -70,7 +70,7 @@
 
     <div id="intro" class="fade-in"> <!-- Introductory section -->
         <h1 class="opening">Welcome! My name is Ezzo</h1> <!-- Heading -->
-        <p>I am a Computer Science <a href="#" id="coloring">Student</a> who is eager to grow and learn as a junior
+        <p>I am a Computer Science <a id="coloring">Student</a> who is eager to grow and learn as a junior
             developer</p> <!-- Paragraph with a custom designed hyperlink -->
         <p id="portfolioMessage">- We're working on making the Portfolio website mobile-compatible, but it's not ready
             yet. please click on the coloring word to proceed
@@ -94,15 +94,15 @@
     <audio id="repeat-audio" src="Media/Filaments.mp3" preload="auto" autoplay loop></audio>
 
     <div class="navbar" id="navbar">
-        <!-- Your navigation links here -->
+        <!-- navigation links here -->
         <div class="top-links">
-            <a href="#link1">My education</a>
-            <a href="#link2">Let's have a talk!</a>
+            <a class="scroll-to" data-target="EducationSection">My education</a>
+            <a class="scroll-to" data-target="SkillsAndContactSection">Let's have a talk!</a>
             <a href="#">Resume/CV &#40;PDF File&#41;</a>
         </div>
 
         <div class="bottom-links">
-            <a class="topa" href="#">Return to top</a>
+            <a class="topa" onclick="scrollToTop()">Return to top</a>
             <div class="toggle-container topa">
                 <input type="checkbox" id="toggle-checkbox" class="toggle-checkbox">
                 <label for="toggle-checkbox" class="toggle-label">
@@ -265,6 +265,30 @@
     </section> <!-- Section for displaying particle effects -->
 
     <script>
+
+        // Function to scroll to the top of the page
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // For smooth scrolling
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            var links = document.querySelectorAll('.scroll-to');
+            links.forEach(function (link) {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    var targetId = this.getAttribute('data-target');
+                    var targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+        });
+
+
         document.getElementById("coloring").addEventListener("click", function () {
             // Calculate the vertical height of the viewport
             const viewportHeight = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
@@ -312,7 +336,7 @@
 
     </script>
 
-    <div class="line" id="link1">
+    <div class="line" id="EducationSection">
 
     </div>
 
@@ -367,7 +391,7 @@
 
     </section>
 
-    <div class="line2" id="link2">
+    <div class="line2" id="SkillsAndContactSection">
 
     </div>
 
@@ -474,7 +498,7 @@
     <section class="sectionfinale">
         <div>
             <a><img src="Icons/image2.png" id="rush"></a>
-            <p style="font-family: pw-world;">Project 9<br>All rights reserved<br><span
+            <p style="font-family: pw-world;">Project 9<br>All rights reserved <span
                     id="currentYear"></span><br>version 1.0
             </p>
         </div>
