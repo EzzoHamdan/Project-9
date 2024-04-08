@@ -10,3 +10,7 @@ I was aware that constructing portfolios consumes considerable time; however, th
 - **Transformation of Skills and Imagination, a Paradigm Shift:** The consistent dedication to work and learning over extended periods has facilitated a profound transformation in my knowledge, mentality, and approach to problem-solving. Weeks of diligent effort have wrought changes so substantial as to render my former self scarcely recognizable. I now possess a heightened ability to discern errors, identify areas of potential, execute code with greater ease, interpret commands adeptly, and perceive through the lens of the end-user. These invaluable attributes are not merely to be safeguarded but diligently honed and solidified.
 
 In conclusion, the journey detailed above represents not only a mastery of technical skills but also a profound personal transformation. Utilizing diverse attributes and properties of vanilla CSS showcases adept styling techniques while integrating vanilla JavaScript underscores a comprehensive approach to web development. Beyond the technical aspects, this journey reflects a paradigm shift in mindset and approach, demonstrating the capacity for continual improvement and learning.
+
+## Updates Section:
+
+- **Version 1.1:** Enhancing professionalism by grouping related files and editing the links behavior and guarantee no changes appear to the URL whatsoever. The version also activated the "Resume/CV (PDF File)." Users now can download copies of the CV directly. Finally, the version enhanced the vocabulary used in the texts for estra clarity.
