@@ -1,6 +1,13 @@
 document.getElementById('rush').onclick = function () {
     const sectionFinale = document.querySelector('.sectionfinale');
-    for (let i = 0; i < 50; i++) {
+    var iValue;
+    if(!isPhone()){
+        iValue = 50;
+    }
+    else{
+        iValue = 25;
+    }
+    for (let i = 0; i < iValue; i++) {
         animateStar(sectionFinale); // Pass sectionFinale as an argument
     }
 };
