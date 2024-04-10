@@ -2,32 +2,35 @@ window.addEventListener('scroll', function () {
   var navbar = document.getElementById('navbar');
   var scrollPos = window.scrollY;
 
-  // Change opacity based on scroll position
-  if (scrollPos > 1400) {
-    document.documentElement.style.setProperty('--hover-alpha', '0.9');
-    document.documentElement.style.setProperty('--blur-value', '5px');
-    navbar.querySelectorAll('a').forEach(function (link) {
-      link.style.color = 'rgba(255, 255, 255, 1)';
-    });
+  if (!isPhone()) {
 
-  } else if (scrollPos > 756) {
-    navbar.style.visibility = 'visible';
-    navbar.style.opacity = 1;
-    document.documentElement.style.setProperty('--hover-alpha', '0.75');
-    document.documentElement.style.setProperty('--blur-value', '5px');
-    //navbar.classList.remove('hidden'); // Remove the 'hidden' class
-    navbar.querySelectorAll('a').forEach(function (link) {
-      link.style.color = 'rgba(255, 255, 255, 1)';
-    });
-  } else {
-    //navbar.classList.add('hidden'); // Add the 'hidden' class
-    navbar.style.visibility = 'hidden';
-    navbar.style.opacity = 0;
-    document.documentElement.style.setProperty('--hover-alpha', '0');
-    document.documentElement.style.setProperty('--blur-value', '0');
-    navbar.querySelectorAll('a').forEach(function (link) {
-      link.style.color = 'rgba(255, 255, 255, 0)';
-    });
+    // Change opacity based on scroll position
+    if (scrollPos > 1400) {
+      document.documentElement.style.setProperty('--hover-alpha', '0.9');
+      document.documentElement.style.setProperty('--blur-value', '5px');
+      navbar.querySelectorAll('a').forEach(function (link) {
+        link.style.color = 'rgba(255, 255, 255, 1)';
+      });
+
+    } else if (scrollPos > 756) {
+      navbar.style.visibility = 'visible';
+      navbar.style.opacity = 1;
+      document.documentElement.style.setProperty('--hover-alpha', '0.75');
+      document.documentElement.style.setProperty('--blur-value', '5px');
+      //navbar.classList.remove('hidden'); // Remove the 'hidden' class
+      navbar.querySelectorAll('a').forEach(function (link) {
+        link.style.color = 'rgba(255, 255, 255, 1)';
+      });
+    } else {
+      //navbar.classList.add('hidden'); // Add the 'hidden' class
+      navbar.style.visibility = 'hidden';
+      navbar.style.opacity = 0;
+      document.documentElement.style.setProperty('--hover-alpha', '0');
+      document.documentElement.style.setProperty('--blur-value', '0');
+      navbar.querySelectorAll('a').forEach(function (link) {
+        link.style.color = 'rgba(255, 255, 255, 0)';
+      });
+    }
   }
 });
 
@@ -38,7 +41,7 @@ window.addEventListener('scroll', function () {
 
 document.addEventListener('DOMContentLoaded', function () {
   const starsContainer = document.querySelector('.stars');
-  const numStars = 12;
+  const numStars = 16;
   const starSizeMin = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--star-size-min'));
   const starSizeMax = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--star-size-max'));
   const starMargin = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--star-margin'));

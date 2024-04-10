@@ -11,7 +11,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    cursor: none;
+    cursor: url(https://cdn.custom-cursor.com/db/15052/32/starter-northern-lights-cursor.png) , default !important;
 }
 
 #custom-cursor {
@@ -225,6 +225,7 @@ video {
 }
 
 .about {
+    overflow: hidden;
     display: flex;
     height: 100vh;
     background-color: rgba(40, 40, 40, 0.5);
@@ -368,6 +369,7 @@ h2 {
 }
 
 .personnel-info {
+    overflow: hidden;
     position: absolute;
     margin-top: 10%;
     left: 50%;

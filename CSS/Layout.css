@@ -31,10 +31,9 @@ body {
     z-index: 8000;
 }
 
-a,
-button {
+a, button, a img{
 
-    cursor: url('pointer.png'), none !important;
+    cursor: url(https://cdn.custom-cursor.com/db/15051/32/starter-northern-lights-pointer.png), pointer !important;
     text-decoration: none;
 
 }
@@ -109,6 +108,7 @@ li:before {
 }
 
 .container {
+    overflow: hidden;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
