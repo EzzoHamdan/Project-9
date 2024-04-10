@@ -21,4 +21,4 @@ Here's a deeper dive into most important changes:
 
 2. Clarity for Users (Expanded):  The update focused on improving the website's overall clarity. This goes beyond just the vocabulary used in the text. Clear navigation structures accross platforms, concise information presentation, and well-labeled links all contribute to a more user-friendly experience.
 
-3. Style Edits for User Experience (Expanded):  While aesthetics play a role, the style edits primarily focused on user experience. This involve optimizing links behavior for easy access on mobile devices and using flexible font size. Edits also included the navigation line.
+3. Style Edits for User Experience (Expanded):  While aesthetics play a role, the style edits primarily focused on user experience. This involve optimizing links behavior for easy access on mobile devices and using flexible font size. Edits also included the navigation line. 
