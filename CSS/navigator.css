@@ -107,6 +107,7 @@
   /* Change color on hover */
 }
 
+
 @media screen and (max-width: 715px) {
   .navbar {
     flex-direction: column;
@@ -145,6 +146,64 @@
   }
 }
 
+@media screen and (max-width: 450px) {
+
+  .navbar:hover {
+    background-color: rgba(40, 40, 40, var(--hover-alpha)) !important;
+    /* Change opacity on hover */
+    padding: 20px 0;
+  }
+  
+  .navbar:hover a {
+  
+    color: #fff !important;
+    font-size: 1.1em !important;
+  }
+  
+  .navbar a:hover {
+    color: #fff !important;
+    /* Change link color on hover */
+  }
+
+  .navbar a:hover::after {
+    width: 0%;
+  }
+
+  .navbar a {
+      font-size: 1.1em !important;
+  }
+
+  .toggle-container {
+      transform: scale(0.6);
+  }
+
+}
+
+@media screen and (max-width: 400px) {
+
+  .navbar:hover a {
+  
+    font-size: 1em !important;
+  }
+
+  .navbar a {
+      font-size: 1em !important;
+  }
+
+}
+
+@media screen and (max-width: 350px) {
+
+  .navbar:hover a {
+  
+    font-size: 0.8em !important;
+  }
+
+  .navbar a {
+      font-size: 0.8em !important;
+  }
+
+}
 
 
 
