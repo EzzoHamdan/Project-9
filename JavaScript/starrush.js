@@ -12,6 +12,7 @@ document.getElementById('rush').onclick = function () {
     }
 };
 
+
 function animateStar(section) {
     let star = document.createElement('div');
     star.className = 'starrush';
