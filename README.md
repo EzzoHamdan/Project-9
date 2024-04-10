@@ -13,4 +13,12 @@ In conclusion, the journey detailed above represents not only a mastery of techn
 
 ## Updates Section:
 
-- **Version 1.1:** Enhancing professionalism by grouping related files and editing link behavior to ensure no changes appear in the URL whatsoever. Additionally, this version activated the 'Resume/CV (PDF File)' feature, allowing end-users to download copies of the CV directly. Finally, the version improved the vocabulary used in the texts for extra clarity.
+- **Version 1.1; Enhancing professionalism and user experience:** This website update goes beyond aesthetics. By grouping related files and editing link behavior, we've ensured a seamless experience where users navigate without any changes in the URL. This promotes a sense of professionalism and avoids confusion. Additionally, a key feature was activated: the ability to download my resume directly as PDF. This caters to user needs and streamlines the process for potential employers seeking the CV. Finally, the update focused on improving the clarity of website text. Refined vocabulary makes information easier to understand for a wider audience.
+
+Here's a deeper dive into most important changes:
+
+1. Mobile Friendliness (New):  We've implemented changes to ensure the website displays optimally across a wide range of mobile devices. This ensures everyone has a smooth user experience, regardless of their device.
+
+2. Clarity for Users (Expanded):  The update focused on improving the website's overall clarity. This goes beyond just the vocabulary used in the text. Clear navigation structures accross platforms, concise information presentation, and well-labeled links all contribute to a more user-friendly experience.
+
+3. Style Edits for User Experience (Expanded):  While aesthetics play a role, the style edits primarily focused on user experience. This involve optimizing links behavior for easy access on mobile devices and using flexible font size. Edits also included the navigation line.
