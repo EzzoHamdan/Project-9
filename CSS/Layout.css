@@ -401,6 +401,7 @@ li:before {
     }
 
     .work {
+        width: 90%;
         top: 145%;
     }
 
@@ -457,4 +458,15 @@ li:before {
 
 }
 
+@media screen and (max-width: 450px) {
 
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+
+    }
+
+}

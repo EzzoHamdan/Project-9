@@ -2,8 +2,6 @@ window.addEventListener('scroll', function () {
   var navbar = document.getElementById('navbar');
   var scrollPos = window.scrollY;
 
-
-
   if (scrollPos > 1400) {
     document.documentElement.style.setProperty('--hover-alpha', '0.9');
     document.documentElement.style.setProperty('--blur-value', '5px');
