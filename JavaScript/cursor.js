@@ -5,10 +5,10 @@ if (!isPhone()) {
     cosmicCursorDiv.setAttribute("id", "cosmic-cursor");
     cosmicCursorDiv.classList.add("fade-out");
 
+
     var sideBarDiv = document.createElement("div");
     sideBarDiv.classList.add("side-bar");
     cosmicCursorDiv.appendChild(sideBarDiv);
-
 
     // Create a div element for middle bar
     var middleBarDiv = document.createElement("div");
@@ -18,6 +18,7 @@ if (!isPhone()) {
     var sideBarDiv = document.createElement("div");
     sideBarDiv.classList.add("side-bar");
     cosmicCursorDiv.appendChild(sideBarDiv);
+    
 
     // Append the cosmic cursor div to the body
     document.body.appendChild(cosmicCursorDiv);
@@ -49,6 +50,6 @@ if (!isPhone()) {
             document.getElementById('click-text').classList.add('active');
 
 
-        }, 1000); // Adjust the time
+        }, 1000); 
     };
 }
