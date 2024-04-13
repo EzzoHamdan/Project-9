@@ -261,6 +261,7 @@ video {
     border-radius: 10px;
     z-index: 1000;
     justify-content: center;
+    align-items: center;
     background-color: rgba(40, 40, 40, 0);
     transition: background-color 0.3s ease-in-out;
     /* Smooth transition on background-color change */
@@ -333,6 +334,9 @@ video {
     list-style: none;
     padding: 0%;
     transition: padding 0.3 ease-in-out;
+    /* Smooth transition on padding change */
+    align-items: center; /* Center vertically */
+    justify-items: center; /* Center horizontally */
 }
 
 .sqrleft img {
