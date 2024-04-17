@@ -1,5 +1,3 @@
-
-
 // Function to scroll to the top of the page
 function scrollToTop() {
     window.scrollTo({
@@ -22,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+var intervalID;
 
 document.getElementById("coloring").addEventListener("click", function () {
 
@@ -48,10 +47,14 @@ document.getElementById("coloring").addEventListener("click", function () {
     document.body.style.overflowY = 'auto';
 });
 
-// Set the interval and store the interval ID
-var intervalID = setInterval(function () {
-    document.getElementById('coloring').classList.toggle('shake');
-}, 5000);
+// Wait 5 seconds before starting the animation
+setTimeout(function() {
+    // Set the interval and store the interval ID
+    intervalID = setInterval(function () {
+      document.getElementById('coloring').classList.toggle('shake');
+    }, 2500);
+  }, 5000);
+  
 
 // Add click event listener to the element
 document.getElementById('coloring').addEventListener('click', function () {

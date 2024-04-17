@@ -71,21 +71,23 @@
 }
 
 .shake {
-    animation: shake 3s ease-in-out;
+    animation: shake 2.5s ease-in-out;
 }
 
 @keyframes shake {
-    0%, 100% {
-        font-size: 1.2rem;
+    from, to {
+      font-size: 100%;
     }
-
-    10%, 30%, 50%, 70%, 90% {
-        font-size: 1.4rem;
+  
+    50% {
+      font-size: 85%;
     }
-    20%, 40%, 60%, 80% {
-        font-size: 1rem;
+  
+    25%, 75% {
+      font-size: 125%;
     }
-}
+  }
+  
 
 
 .normalsection {
