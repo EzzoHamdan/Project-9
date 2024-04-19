@@ -1,549 +1,535 @@
 :root {
-    --sizebefore: 1;
-    --sizewhile: 1.2;
-    --sizemed: 1.1;
-
+  --sizebefore: 1;
+  --sizewhile: 1.2;
+  --sizemed: 1.1;
 }
 
 * {
-    scroll-behavior: smooth;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    cursor: url(https://cdn.custom-cursor.com/db/15052/32/starter-northern-lights-cursor.png), default !important;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: url(https://cdn.custom-cursor.com/db/15052/32/starter-northern-lights-cursor.png),
+    default !important;
 }
 
 #custom-cursor {
-    position: fixed;
-    pointer-events: none;
-    z-index: 9999;
-    width: 28px;
-    height: 28px;
-    display: none;
-    /* Hidden by default */
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  width: 28px;
+  height: 28px;
+  display: none;
+  /* Hidden by default */
 }
 
 @font-face {
-    font-family: 'astron-boy';
-    src: url('astron boy video.otf') format('opentype');
+  font-family: "astron-boy";
+  src: url("astron boy video.otf") format("opentype");
 }
 
 @font-face {
-    font-family: 'ekors';
-    src: url('EkorsNonCommercial.otf') format('opentype');
+  font-family: "ekors";
+  src: url("EkorsNonCommercial.otf") format("opentype");
 }
 
 @font-face {
-    font-family: 'echo';
-    src: url('ECHOSHIFT.otf') format('opentype');
+  font-family: "echo";
+  src: url("ECHOSHIFT.otf") format("opentype");
 }
 
 @font-face {
-    font-family: 'the-off-set';
-    src: url('OffsettDemoRegular.ttf') format('truetype');
+  font-family: "the-off-set";
+  src: url("OffsettDemoRegular.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: 'pw-world';
-    src: url('PWWORLDSEND2112.ttf') format('truetype');
+  font-family: "pw-world";
+  src: url("PWWORLDSEND2112.ttf") format("truetype");
 }
-
 
 #text {
-    font-family: 'the-off-set' !important;
-    position: absolute;
-    text-align: center;
-    color: #000;
-    font-size: 7em;
-    z-index: 1;
+  font-family: "the-off-set" !important;
+  position: absolute;
+  text-align: center;
+  color: #000;
+  font-size: 7em;
+  z-index: 1;
 }
 
 #road {
-    z-index: 2;
+  z-index: 2;
 }
-
 
 #background {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
-.shake {
-    animation: shake 2.5s ease-in-out;
+.accessport {
+  position: absolute;
+  z-index: 10;
+  transform: scale(2.5);
+  top: 150px;
 }
 
-@keyframes shake {
-    from, to {
-      font-size: 100%;
-    }
-  
-    50% {
-      font-size: 85%;
-    }
-  
-    25%, 75% {
-      font-size: 125%;
-    }
+.up-and-down {
+  animation: up-and-down 2.5s ease-in-out;
+}
+
+@keyframes up-and-down {
+  0%,
+  100% {
+    top: 150px;
   }
-  
-
+  25% {
+    top: 170px;
+    transform: rotate(-10deg) scale(3.5);
+  }
+  50% {
+    top: 130px;
+    transform: rotate(0deg) scale(3);
+  }
+  75% {
+    top: 170px;
+    transform: rotate(10deg) scale(3.5);
+  }
+}
 
 .normalsection {
-
-    margin-top: 10%;
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+  margin-top: 10%;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #portfolioMessage {
-    display: none;
-    /* Hide the paragraph initially */
-    font-size: 0.9rem;
-
+  display: none;
+  /* Hide the paragraph initially */
+  font-size: 0.9rem;
 }
 
 .line {
-    z-index: 50;
-    box-shadow: 0px 35px 60px 35px black, 0px 60px 60px 35px black, 0px -100px 50px 25px black, 0px -150px 50px 25px black;
-    position: relative;
-    width: 100%;
-    height: 50px;
-    overflow: hidden;
-    display: block;
-
+  z-index: 50;
+  box-shadow: 0px 35px 60px 35px black, 0px 60px 60px 35px black,
+    0px -100px 50px 25px black, 0px -150px 50px 25px black;
+  position: relative;
+  width: 100%;
+  height: 50px;
+  overflow: hidden;
+  display: block;
 }
 
 .line2 {
-    z-index: 50;
-    box-shadow: 0px 15px 60px 35px black, 0px 30px 60px 35px black, 0px -25px 50px 25px black, 0px -75px 50px 25px black;
-    position: relative;
-    width: 100%;
-    height: 50px;
-    overflow: hidden;
-    display: block;
-    z-index: 4;
-
+  z-index: 50;
+  box-shadow: 0px 15px 60px 35px black, 0px 30px 60px 35px black,
+    0px -25px 50px 25px black, 0px -75px 50px 25px black;
+  position: relative;
+  width: 100%;
+  height: 50px;
+  overflow: hidden;
+  display: block;
+  z-index: 4;
 }
 
 .sectionfinale {
-    display: flex;
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    justify-content: center;
-    text-align: center;
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  justify-content: center;
+  text-align: center;
 }
 
 .sectionfinale img {
-    width: 128px;
-    height: 128px;
+  width: 128px;
+  height: 128px;
 }
 
-
 .sectionfinale p {
-    font-family: "pw-world";
-    font-size: 1rem;
-    line-height: 1.6;
-    color: white;
+  font-family: "pw-world";
+  font-size: 1rem;
+  line-height: 1.6;
+  color: white;
 }
 
 .sectiond {
-    display: block;
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
 video {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 
 .blur-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    backdrop-filter: blur(2px);
-    /* Adjust blur strength as needed */
-    background-color: rgba(0, 0, 0, 0.5);
-    /* Adjust background color and opacity as needed */
-    z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(2px);
+  /* Adjust blur strength as needed */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Adjust background color and opacity as needed */
+  z-index: 1;
 }
 
 .blur-overlay2 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    backdrop-filter: blur(2.25px);
-    /* Adjust blur strength as needed */
-    background-color: rgba(0, 0, 0, 0.75);
-    /* Adjust background color and opacity as needed */
-    z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(2.25px);
+  /* Adjust blur strength as needed */
+  background-color: rgba(0, 0, 0, 0.75);
+  /* Adjust background color and opacity as needed */
+  z-index: 1;
 }
 
-
 .box {
-    width: 100%;
-    background-color: rgba(138, 43, 226, .5);
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    justify-content: center;
-    text-align: center;
-
+  width: 100%;
+  background-color: rgba(138, 43, 226, 0.5);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  text-align: center;
 }
 
 .sectionf {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    animation: fadeImage 10s infinite;
-    /* Change the time as per your preference */
-
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: fadeImage 10s infinite;
+  /* Change the time as per your preference */
 }
 
 @keyframes fadeImage {
-    0% {
-        opacity: 0;
-    }
+  0% {
+    opacity: 0;
+  }
 
-    10% {
-        opacity: 1;
-    }
+  10% {
+    opacity: 1;
+  }
 
-    90% {
-        opacity: 1;
-    }
+  90% {
+    opacity: 1;
+  }
 
-    100% {
-        opacity: 0;
-    }
+  100% {
+    opacity: 0;
+  }
 }
 
 .about {
-    overflow: hidden;
-    display: flex;
-    height: 100vh;
-    background-color: rgba(40, 40, 40, 0.5);
-    z-index: 3;
-    padding-bottom: 5%;
-    align-items: center;
-    justify-content: center;
-    /* horizontally center */
+  overflow: hidden;
+  display: flex;
+  height: 100vh;
+  background-color: rgba(40, 40, 40, 0.5);
+  z-index: 3;
+  padding-bottom: 5%;
+  align-items: center;
+  justify-content: center;
+  /* horizontally center */
 }
 
 .left {
-    max-width: 100%;
-    max-height: 100%;
-    flex: 1;
-    padding: 1%;
-    margin: 5%;
-    border-radius: 10px;
-    z-index: 1000;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(40, 40, 40, 0);
-    transition: background-color 0.3s ease-in-out;
-    /* Smooth transition on background-color change */
-
+  max-width: 100%;
+  max-height: 100%;
+  flex: 1;
+  padding: 1%;
+  margin: 5%;
+  border-radius: 10px;
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(40, 40, 40, 0);
+  transition: background-color 0.3s ease-in-out;
+  /* Smooth transition on background-color change */
 }
 
 .left:hover {
-    background-color: rgba(40, 40, 40, .5);
-
+  background-color: rgba(40, 40, 40, 0.5);
 }
 
 .left img {
-    transform: scale(1);
-    /* Start with larger size */
-    transition: transform 0.3s ease-in-out;
-    /* Smooth transition */
+  transform: scale(1);
+  /* Start with larger size */
+  transition: transform 0.3s ease-in-out;
+  /* Smooth transition */
 }
 
 .left img:hover {
-    transform: scale(1.2);
-    /* Scale down on hover */
-    animation: none;
-    /* Remove animation */
+  transform: scale(1.2);
+  /* Scale down on hover */
+  animation: none;
+  /* Remove animation */
 }
 
-
 .right {
-    max-width: 100%;
-    max-height: 100%;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    z-index: 1000;
-    padding: 20px;
-    margin: 5%;
-    justify-content: center;
-    text-align: justify;
-
+  max-width: 100%;
+  max-height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  padding: 20px;
+  margin: 5%;
+  justify-content: center;
+  text-align: justify;
 }
 
 .square:hover {
-    background-color: rgba(40, 40, 40, .5);
+  background-color: rgba(40, 40, 40, 0.5);
 }
 
 .square {
-    flex: 1;
-    border-radius: 10px;
-    background-color: rgba(40, 40, 40, 0.);
-    padding: 20px;
-    z-index: 1000;
-    justify-content: center;
-    text-align: justify;
-    transition: background-color 0.3s ease-in-out;
-    /* Smooth transition on background-color change */
-    width: 100%;
-    height: auto;
+  flex: 1;
+  border-radius: 10px;
+  background-color: rgba(40, 40, 40, 0);
+  padding: 20px;
+  z-index: 1000;
+  justify-content: center;
+  text-align: justify;
+  transition: background-color 0.3s ease-in-out;
+  /* Smooth transition on background-color change */
+  width: 100%;
+  height: auto;
 }
 
 .sqrlinks {
-    text-align: center;
-    padding: 5% 0%;
+  text-align: center;
+  padding: 5% 0%;
 }
 
 .sqrleft {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    /* 4 columns with equal width */
-    gap: 20px;
-    /* Spacing between images */
-    list-style: none;
-    padding: 0%;
-    transition: padding 0.3 ease-in-out;
-    /* Smooth transition on padding change */
-    align-items: center; /* Center vertically */
-    justify-items: center; /* Center horizontally */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* 4 columns with equal width */
+  gap: 20px;
+  /* Spacing between images */
+  list-style: none;
+  padding: 0%;
+  transition: padding 0.3 ease-in-out;
+  /* Smooth transition on padding change */
+  align-items: center; /* Center vertically */
+  justify-items: center; /* Center horizontally */
 }
 
 .sqrleft img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .sqrlinks a img {
-    width: 100px;
-    height: 100px;
-    align-self: center;
-    margin: 0 10px;
+  width: 100px;
+  height: 100px;
+  align-self: center;
+  margin: 0 10px;
 }
 
 .sqrlinks a img:hover {
-    animation: spinnerAnimation 0.7s ease forwards;
+  animation: spinnerAnimation 0.7s ease forwards;
 }
 
 #middletextfosquare {
-    text-align: center;
+  text-align: center;
 }
-
 
 @keyframes spinnerAnimation {
+  0%,
+  100% {
+    transform: scale(var(--sizebefore)) rotate(0deg);
+  }
 
-    0%,
-    100% {
-        transform: scale(var(--sizebefore)) rotate(0deg);
-    }
+  30% {
+    transform: scale(var(--sizewhile)) rotate(20deg);
+  }
 
-    30% {
-        transform: scale(var(--sizewhile)) rotate(20deg);
-    }
+  50% {
+    transform: scale(var(--sizemed));
+  }
 
-    50% {
-        transform: scale(var(--sizemed));
-    }
-
-    70% {
-        transform: scale(var(--sizewhile)) rotate(-20deg);
-    }
+  70% {
+    transform: scale(var(--sizewhile)) rotate(-20deg);
+  }
 }
 
-
-
-
 h2 {
-    font-family: 'ekors';
-    margin-bottom: 10px;
-    color: #fff;
+  font-family: "ekors";
+  margin-bottom: 10px;
+  color: #fff;
 }
 
 .personnel-info {
-    overflow: hidden;
-    position: absolute;
-    margin-top: 10%;
-    left: 50%;
-    transform: translateX(-50%) !important;
-    z-index: 100;
+  overflow: hidden;
+  position: absolute;
+  margin-top: 10%;
+  left: 50%;
+  transform: translateX(-50%) !important;
+  z-index: 100;
 }
 
 @media (max-width: 1000px) {
-    .containInfo {
-        grid-template-columns: repeat(1, 1fr);
-        margin-left: auto;
-        margin-right: auto;
-    }
-
+  .containInfo {
+    grid-template-columns: repeat(1, 1fr);
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .normalsection:before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 100px;
-    background: linear-gradient(to top, black, transparent);
-    z-index: 1000;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, black, transparent);
+  z-index: 1000;
 }
 
 .normalsection:after {
-
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: black;
-    z-index: 1000;
-    mix-blend-mode: color;
-
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  z-index: 1000;
+  mix-blend-mode: color;
 }
 
 .normalsection img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    pointer-events: none;
-
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
 }
 
 .normalsection #moon {
-
-    object-fit: cover;
-
+  object-fit: cover;
 }
 
 .starssection {
-    z-index: 1;
-    box-shadow: -100px 280px 450px black,
-        100px 280px 450px black;
-    /* Adjust the values as needed */
-    position: relative;
-    width: 100%;
-    height: 200vh;
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    overflow: hidden;
+  z-index: 1;
+  box-shadow: -100px 280px 450px black, 100px 280px 450px black;
+  /* Adjust the values as needed */
+  position: relative;
+  width: 100%;
+  height: 200vh;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
 }
 
 .spanParticle {
-    position: absolute;
-    width: 4px;
-    height: 4px;
-    background: rgb(255, 255, 255);
-    border-radius: 50%;
-    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1),
-        0 0 0 8px rgba(255, 255, 255, 0.1),
-        0 0 20px rgb(255, 255, 255);
-    opacity: 0;
-    animation: animate 4s linear infinite;
-    z-index: 1;
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgb(255, 255, 255);
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1),
+    0 0 0 8px rgba(255, 255, 255, 0.1), 0 0 20px rgb(255, 255, 255);
+  opacity: 0;
+  z-index: 1;
 }
 
 .spanParticle::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 300px;
-    height: 1px;
-    background: linear-gradient(90deg, #ffffff, transparent);
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 300px;
+  height: 1px;
+  background: linear-gradient(90deg, #ffffff, transparent);
 }
 
 @keyframes animate {
-    0% {
-        transform: rotate(315deg) translateX(0);
-        opacity: 0;
-    }
+  0% {
+    transform: rotate(315deg) translateX(0);
+    opacity: 0;
+  }
 
-    15% {
-        opacity: 0.20;
-    }
+  15% {
+    opacity: 0.2;
+  }
 
-    25% {
-        opacity: 0.5;
-    }
+  25% {
+    opacity: 0.5;
+  }
 
-    40% {
-        opacity: 1;
-    }
+  40% {
+    opacity: 1;
+  }
 
-    65% {
-        opacity: 0.5;
-    }
+  65% {
+    opacity: 0.5;
+  }
 
-    75% {
-        opacity: 0;
-    }
+  75% {
+    opacity: 0.2;
+  }
+  85% {
+    opacity: 0;
+  }
 
-    100% {
-        transform: rotate(315deg) translateX(-1000px);
-    }
+  100% {
+    transform: rotate(315deg) translateX(-1000px);
+  }
 }
 
 /* Scrollbar */
 ::-webkit-scrollbar {
-    width: 10px;
-    /* adjust width as needed */
-    background-color: transparent;
+  width: 10px;
+  /* adjust width as needed */
+  background-color: transparent;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background-color: rgba(40, 40, 40, 1);
+  background-color: rgba(40, 40, 40, 1);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background-color: rgba(138, 43, 226, 0.3);
-    border-radius: 5px;
-    border: 2px solid rgba(40, 40, 40, 1);
+  background-color: rgba(138, 43, 226, 0.3);
+  border-radius: 5px;
+  border: 2px solid rgba(40, 40, 40, 1);
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(138, 43, 226, 0.7);
+  background-color: rgba(138, 43, 226, 0.7);
 }
 
 /* Custom scrollbar decoration (Optional) */
 ::-webkit-scrollbar-corner {
-    background-color: #000;
+  background-color: #000;
 }

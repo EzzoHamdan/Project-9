@@ -22,8 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 var intervalID;
 
-document.getElementById("coloring").addEventListener("click", function () {
-
+function scrollToFeaturedElement() {
     const featuredElement = document.getElementById("featuredw");
 
     // Get the height of the viewport
@@ -45,19 +44,22 @@ document.getElementById("coloring").addEventListener("click", function () {
     });
 
     document.body.style.overflowY = 'auto';
-});
+}
 
 // Wait 5 seconds before starting the animation
 setTimeout(function() {
     // Set the interval and store the interval ID
     intervalID = setInterval(function () {
-      document.getElementById('coloring').classList.toggle('shake');
+      document.getElementById('accessport').classList.toggle('up-and-down');
     }, 2500);
   }, 5000);
   
 
 // Add click event listener to the element
-document.getElementById('coloring').addEventListener('click', function () {
+document.getElementById('accessport').addEventListener('click', function () {
+
+    document.getElementById('coloring').onclick = scrollToFeaturedElement;
+
     // Clear the interval on click
     clearInterval(intervalID);
 });
