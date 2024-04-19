@@ -71,7 +71,7 @@
 .accessport {
   position: absolute;
   z-index: 10;
-  transform: scale(2.5);
+  transform: scale(3);
   top: 150px;
 }
 
@@ -83,18 +83,20 @@
   0%,
   100% {
     top: 150px;
+    transform: rotate(0deg) scale(3);
+
   }
   25% {
     top: 170px;
-    transform: rotate(-10deg) scale(3.5);
+    transform: rotate(-10deg) scale(4.5);
   }
   50% {
     top: 130px;
-    transform: rotate(0deg) scale(3);
+    transform: rotate(0deg) scale(3.5);
   }
   75% {
     top: 170px;
-    transform: rotate(10deg) scale(3.5);
+    transform: rotate(10deg) scale(4.5);
   }
 }
 

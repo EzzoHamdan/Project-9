@@ -316,6 +316,13 @@ li:before {
   }
 }
 
+@media screen and (max-width: 950px){
+  .opening{
+    font-size: 2.2rem;
+  }
+}
+
+
 @media screen and (max-width: 830px) {
   .about {
     flex-direction: column;
@@ -375,6 +382,7 @@ li:before {
 }
 
 @media screen and (max-width: 850px) {
+
   h1 {
     font-size: 2rem;
   }
@@ -395,6 +403,32 @@ li:before {
   .toggle-container {
     transform: scale(0.9);
   }
+
+  .accessport {
+
+    top: 180px;
+  }
+
+  @keyframes up-and-down {
+    0%,
+    100% {
+      top: 180px;
+      transform: rotate(0deg) scale(3);
+  
+    }
+    25% {
+      top: 200px;
+      transform: rotate(-10deg) scale(4.5);
+    }
+    50% {
+      top: 160px;
+      transform: rotate(0deg) scale(3.5);
+    }
+    75% {
+      top: 200px;
+      transform: rotate(10deg) scale(4.5);
+    }
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -405,6 +439,7 @@ li:before {
   .toggle-container {
     transform: scale(0.8);
   }
+  
 }
 
 @media screen and (max-width: 750px) {
@@ -433,6 +468,31 @@ li:before {
   .square p {
     font-size: 0.8rem;
   }
+  .accessport {
+
+    top: 200px;
+  }
+
+  @keyframes up-and-down {
+    0%,
+    100% {
+      top: 200px;
+      transform: rotate(0deg) scale(3);
+  
+    }
+    25% {
+      top: 220px;
+      transform: rotate(-10deg) scale(4.5);
+    }
+    50% {
+      top: 180px;
+      transform: rotate(0deg) scale(3.5);
+    }
+    75% {
+      top: 220px;
+      transform: rotate(10deg) scale(4.5);
+    }
+  }
 }
 
 @media screen and (max-width: 450px) {
@@ -443,4 +503,6 @@ li:before {
   p {
     font-size: 0.9rem;
   }
+
+
 }
