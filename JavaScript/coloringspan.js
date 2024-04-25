@@ -31,8 +31,8 @@ function scrollToFeaturedElement() {
     // Get the height of the featured element
     const featuredHeight = featuredElement.clientHeight;
 
-    // Define the additional offset (in pixels) you want
-    const additionalOffset = 225; // Adjust this value as needed
+    // Define the additional offset
+    const additionalOffset = viewportHeight * 0.3; // Adjust the numerical value
 
     // Calculate the offset to scroll to the middle of the element with additional offset
     const offset = Math.max(0, (featuredHeight - viewportHeight) / 2) + additionalOffset;
@@ -41,9 +41,12 @@ function scrollToFeaturedElement() {
     window.scroll({
         top: featuredElement.offsetTop - offset,
         behavior: 'smooth'
+        
     });
 
     document.body.style.overflowY = 'auto';
+
+    
 }
 
 // Wait 5 seconds before starting the animation

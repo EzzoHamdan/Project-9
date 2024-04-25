@@ -30,7 +30,6 @@
             window.scrollTo(0, 0);
         };
 
-
     </script>
 
 </head>
@@ -61,6 +60,8 @@
         setTimeout(displayParagraph, 10000);
     </script>
 
+    <script src="JavaScript/coloringspan.js"></script>
+
     <script src="JavaScript/nav.js"></script>
 
     <audio id="repeat-audio" src="Media/Filaments.mp3" preload="auto" autoplay loop></audio>
@@ -87,14 +88,14 @@
 
 
 
-    <div id="featuredw" class="work hid slide-down">
+    <div id="featuredw" class="work slide-down">
         <h1>Featured projects</h1>
         <p>Showcased projects were created either as part of university coursework or solely for the purposes
             of personal learning and professional development.</p>
 
     </div>
 
-    <div id="featuredc" class="carousel hid slide-down">
+    <div id="featuredc" class="carousel slide-down">
         <div class="slide-container">
             <div class="slide">
                 <h2>Project 9</h2>
@@ -259,8 +260,6 @@
 
     </section> <!-- Section for displaying particle effects -->
 
-    <script src="JavaScript/coloringspan.js"></script>
-
     <section class="normalsection">
 
         <img src="Pictures/sky.jpg" id="sky">
@@ -288,7 +287,7 @@
             road.style.top = -value * 0.05 + 'px';
             text.style.bottom = tvalue * 0.5 + 'px';
 
-        })
+        });
 
     </script>
 
@@ -297,11 +296,11 @@
     </div>
 
 
-    <div id="hidE" class="hid slide-up personnel-info">
+    <div id="eduTitle" class="slide-up personnel-info">
         <h1>Education</h1>
     </div>
     <div class="container">
-        <div class="hid slide-left card">
+        <div id="leftCard" class="slide-left card">
             <img src="Icons/Unilogo.png" alt="">
             <div class="card-content">
                 <h2>Al-Ahliyya Amman University</h2>
@@ -317,7 +316,7 @@
             </div>
         </div>
 
-        <div class="hid slide-right card">
+        <div id="rightCard" class="slide-right card">
             <img src="Icons/language.png" alt="">
             <div class="card-content">
                 <h2>Languages</h2>
@@ -384,7 +383,7 @@
     </script>
 
     <div class="about">
-        <div class="hid slide-left left">
+        <div id="leftAbout" class="slide-left left">
             <h1>My Skills</h1>
 
             <div class="sqrleft">
@@ -424,7 +423,7 @@
             </div>
 
         </div>
-        <div class="hid slide-right right">
+        <div id="rightAbout" class="slide-right right">
             <div class="square">
                 <h1>Let's have a talk!</h1>
                 <p>I am open to explore all wide range of projects but I am particularly drawn to those that offer
@@ -449,7 +448,7 @@
         </div>
     </div>
 
-    <div class="line2">
+    <div class="line2" id="lastLine">
 
     </div>
 
@@ -468,70 +467,7 @@
 
     <script src="JavaScript/starrush.js"></script>
 
-
-    <script>
-        window.addEventListener('scroll', function () {
-            var navbar = document.getElementById('navbar');
-            var scrollPosition = window.scrollY;
-
-            // Define the scroll threshold where the navbar stops being fixed
-            var scrollThreshold = 3800; // Adjust this value as needed
-
-            if (scrollPosition > scrollThreshold) {
-                navbar.classList.add('hidden'); // Add the 'hidden' class
-
-            } else {
-                navbar.classList.remove('hidden'); // Remove the 'hidden' class
-            }
-
-        });
-    </script>
-
-    <script>
-        window.addEventListener('scroll', function () {
-            var sections = document.querySelectorAll('.hid');
-            var positionFromTop = window.scrollY;
-
-            if (positionFromTop > 750) {
-                var featuredw = document.getElementById('featuredw');
-                var featuredc = document.getElementById('featuredc');
-                featuredw.classList.add('visibleforf');
-                featuredc.classList.add('visibleforf');
-
-                setTimeout(function () {
-                    featuredw.classList.remove('hid');
-                    featuredc.classList.remove('hid');
-                }, 3000);
-            }
-            if (positionFromTop > 2150) {
-                var title = document.getElementById('hidE');
-                title.classList.add('visibleforf');
-
-                setTimeout(function () {
-                    title.classList.remove('hid');
-                }, 3000);
-            }
-
-            if (positionFromTop > 2100) {
-                sections.forEach(function (section) {
-                    if (positionFromTop > section.offsetTop - window.innerHeight / 2) {
-                        section.classList.add('visible');
-                        title.classList.add('visibleforf')
-
-                        // Add a setTimeout function to remove 'hid' class after 3 seconds
-                        setTimeout(function () {
-                            section.classList.remove('hid');
-                            title.classList.remove('hidE');
-
-                        }, 3000); // 3000 milliseconds = 3 seconds
-                    }
-                });
-            }
-        });
-
-    </script>
-
-
+    <script src="JavaScript/revealOnScroll.js"></script>
 
 </body>
 

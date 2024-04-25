@@ -67,11 +67,6 @@
   transition: width 0.3s ease;
 }
 
-.hidden {
-  visibility: hidden !important;
-  opacity: 0 !important;
-}
-
 .navbar a:hover::after {
   width: 100%;
 }

@@ -113,6 +113,7 @@ li:before {
 }
 
 .card {
+  opacity: 0;
   flex: 1;
   display: flex;
   align-items: center;
@@ -122,6 +123,8 @@ li:before {
   border-radius: 25px;
   padding: 10px;
   transition: all 0.3s ease-in-out;
+  transform: translateX(0%);
+
   /* Smooth transition on background-color change */
 }
 
@@ -181,6 +184,7 @@ li:before {
 }
 
 .work {
+  opacity: 0;
   position: absolute;
   top: 140%;
   left: 50%;
@@ -208,8 +212,10 @@ li:before {
 }
 
 .visible {
-  opacity: 1;
-  transform: translateX(0) translateY(0) !important;
+  opacity: 1 !important;
+  transform: translateX(0%) !important;
+  transition: opacity 0.75s ease-in-out, transform 0.75s ease-in-out, background-color 0.3s ease-in-out;
+
 }
 
 .slide-left {
@@ -228,9 +234,10 @@ li:before {
   transform: translateY(100%);
 }
 
-.visibleforf {
-  opacity: 1;
+.visibleforcenter {
+  opacity: 1 !important;
   transform: translate(-50%, -50%) !important;
+  transition: opacity 0.75s ease-in-out, transform 0.75s ease-in-out;
 }
 
 @media screen and (max-width: 1400px) {
@@ -282,12 +289,17 @@ li:before {
 }
 
 @media screen and (max-width: 1150px) {
-  .about h1 {
-    font-size: 2rem;
+
+  h2{
+    font-size: 1.2rem;
+
   }
 
-  .about p {
-    font-size: 1rem;
+  .card img {
+    max-width: 80px;
+    /* Adjust as needed */
+    height: auto;
+    /* Maintain aspect ratio */
   }
 
   .sqrlinks a img {
@@ -349,20 +361,11 @@ li:before {
 
   .right {
     margin: 0% 10% 5%;
-    flex-direction: row;
     padding: 1%;
   }
 
   .square {
     padding: 2%;
-  }
-
-  .square h1 {
-    font-size: 1.4rem;
-  }
-
-  .square p {
-    font-size: 0.9rem;
   }
 
   .sqrlinks {
@@ -391,10 +394,20 @@ li:before {
     font-size: 1rem;
   }
 
+  h4 {
+    font-size: 0.8rem;
+  }
+
   .work {
     width: 90%;
     top: 145%;
   }
+
+  .made-with-icons img:hover{
+
+    transform: scale(1.1);
+    
+}
 
   .navbar a {
     font-size: 1.4rem !important;
@@ -452,22 +465,25 @@ li:before {
   }
 }
 
+.container li {
+  font-size: 12px;
+}
+
+.made-with-icons img:hover{
+
+  transform: scale(1.0);
+  
+}
+
 @media screen and (max-width: 600px) {
   #middletextfosquare {
     text-align: justify;
   }
 
   .square {
-    margin: 5% 0%;
+    margin: 1% 0%;
   }
 
-  .square h1 {
-    font-size: 1.2rem;
-  }
-
-  .square p {
-    font-size: 0.8rem;
-  }
   .accessport {
 
     top: 200px;
@@ -504,5 +520,52 @@ li:before {
     font-size: 0.9rem;
   }
 
+  h2{
+    font-size: 1rem;
+
+  }
+
+  h4 {
+    font-size: 0.7rem;
+  }
+
+  .card img {
+    max-width: 75px;
+    /* Adjust as needed */
+    height: auto;
+    /* Maintain aspect ratio */
+  }
+
+}
+
+@media screen and (max-width: 400px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  p {
+    font-size: 0.7rem;
+  }
+
+  h2{
+    font-size: 0.9rem;
+
+  }
+
+  h4 {
+    font-size: 0.6rem;
+  }
+
+  .made-with-icons img{
+
+    max-width: 35px !important;
+
+  }
+
+  .worklink img{
+    margin-top: 10px;
+    max-width: 35px !important;
+    height: auto;
+  }
 
 }

@@ -1,35 +1,45 @@
 window.addEventListener('scroll', function () {
-  var navbar = document.getElementById('navbar');
   var scrollPos = window.scrollY;
+  const featuredElement = document.getElementById("featuredw");
+  const lastLine = document.getElementById("lastLine");
+  //const root = document.documentElement;
 
-  if (scrollPos > 1400) {
-    document.documentElement.style.setProperty('--hover-alpha', '0.9');
-    document.documentElement.style.setProperty('--blur-value', '5px');
-    navbar.querySelectorAll('a').forEach(function (link) {
-      link.style.color = 'rgba(255, 255, 255, 1)';
-    });
-
-  } else if (scrollPos > 756) {
-    navbar.style.visibility = 'visible';
-    navbar.style.opacity = 1;
-    document.documentElement.style.setProperty('--hover-alpha', '0.75');
-    document.documentElement.style.setProperty('--blur-value', '5px');
-    //navbar.classList.remove('hidden'); // Remove the 'hidden' class
-    navbar.querySelectorAll('a').forEach(function (link) {
-      link.style.color = 'rgba(255, 255, 255, 1)';
-    });
+  if (scrollPos < featuredElement.offsetTop * 0.75) {
+    makeNavHidden();
+  } else if (scrollPos > lastLine.offsetTop * 0.95) {
+    //setHoverAlpha(0.75);
+    makeNavHidden();
   } else {
-    //navbar.classList.add('hidden'); // Add the 'hidden' class
-    navbar.style.visibility = 'hidden';
-    navbar.style.opacity = 0;
-    document.documentElement.style.setProperty('--hover-alpha', '0');
-    document.documentElement.style.setProperty('--blur-value', '0');
-    navbar.querySelectorAll('a').forEach(function (link) {
-      link.style.color = 'rgba(255, 255, 255, 0)';
-    });
+    //setHoverAlpha(0.75);
+    makeNavVisible();
   }
 
+  //function setHoverAlpha(value) {
+  //  root.style.setProperty('--hover-alpha', value);
+  //}
 });
+
+function makeNavVisible() {
+  navbar.style.visibility = 'visible';
+  navbar.style.opacity = 1;
+  document.documentElement.style.setProperty('--hover-alpha', '0.75');
+  document.documentElement.style.setProperty('--blur-value', '5px');
+  //navbar.classList.remove('hidden'); // Remove the 'hidden' class
+  navbar.querySelectorAll('a').forEach(function (link) {
+    link.style.color = 'rgba(255, 255, 255, 1)';
+  });
+}
+
+function makeNavHidden() {
+  //navbar.classList.add('hidden'); // Add the 'hidden' class
+  navbar.style.visibility = 'hidden';
+  navbar.style.opacity = 0;
+  document.documentElement.style.setProperty('--hover-alpha', '0');
+  document.documentElement.style.setProperty('--blur-value', '0');
+  navbar.querySelectorAll('a').forEach(function (link) {
+    link.style.color = 'rgba(255, 255, 255, 0)';
+  });
+}
 
 
 
