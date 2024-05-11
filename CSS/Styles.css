@@ -318,7 +318,6 @@ video {
   border-radius: 10px;
   background-color: rgba(40, 40, 40, 0);
   padding: 20px;
-  z-index: 1000;
   justify-content: center;
   text-align: justify;
   transition: background-color 0.3s ease-in-out;
@@ -328,6 +327,7 @@ video {
 }
 
 .sqrlinks {
+  display: flex;
   text-align: center;
   padding: 5% 0%;
 }
@@ -350,7 +350,7 @@ video {
   width: 100%;
   height: auto;
 }
-
+/*
 .sqrlinks a img {
   width: 100px;
   height: 100px;
@@ -360,7 +360,7 @@ video {
 
 .sqrlinks a img:hover {
   animation: spinnerAnimation 0.7s ease forwards;
-}
+}*/
 
 #middletextfosquare {
   text-align: center;
