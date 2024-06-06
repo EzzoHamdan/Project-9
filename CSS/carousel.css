@@ -117,16 +117,13 @@ button:hover {
   }
   
 .worklink {
-    max-width: 56px;
     position: absolute;
-    left: 60px;
-    bottom: 15px;
+    bottom: 25px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding: 1px;
     filter: invert(100%);
-    transition: transform 0.3s ease; /* Changed from rotate to transform */
+    transition: transform 0.3s ease; 
 }
 /*
 .worklink:hover {
