@@ -21,4 +21,18 @@ Here's a deeper dive into most important changes:
 
 2. Clarity for Users (Expanded):  The update focused on improving the website's overall clarity. This goes beyond just the vocabulary used in the text. Clear navigation structures accross platforms, concise information presentation, and well-labeled links all contribute to a more user-friendly experience.
 
-3. Style Edits for User Experience (Expanded):  While aesthetics play a role, the style edits primarily focused on user experience. This involve optimizing links behavior for easy access on mobile devices and using flexible font size. Edits also included the navigation line. 
+3. Style Edits for User Experience (Expanded):  While aesthetics play a role, the style edits primarily focused on user experience. This involve optimizing links behavior for easy access on mobile devices and using flexible font size. Edits also included the navigation line.
+
+<hr/>
+
+- **Version 1.2; Elevating Information Display and Engagement:** This update continues the commitment to refining user experience, emphasizing style, clarity, and ease of navigation. By improving the overall layout and enriching content, this update provide users with a more informative and engaging journey through the site.
+
+Here's a deeper dive into the most important changes:
+
+1. Enhanced User Experience and Style (Expanded): Building on previous adjustments, this version introduces further refinements to enhance ease of use and visual appeal. With small but impactful tweaks to navigation flow and layout, users can enjoy a more seamless and attractive browsing experience.
+
+2. Expanded Content with Additional Details (Expanded): This update introduces expanded content sections, providing users with a broader and more detailed understanding of the site’s purpose and offerings. Clear, comprehensive details make it easier for users to find the information they’re looking for.
+
+3. New Timeline Section (New): To improve navigation and offer users a structured view of past updates, the update added a dedicated timeline section. This visually organizes history and key milestones, helping users track achievements at a glance.
+
+<hr/>
