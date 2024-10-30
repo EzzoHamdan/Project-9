@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="CSS/carousel.css">
     <link rel="stylesheet" href="CSS/cosmos.css">
     <link rel="stylesheet" href="CSS/socialmedia.css">
+    <link rel="stylesheet" href="CSS/timeline.css">
 
     <!-- <link rel="stylesheet" href="star.css"> -->
 
@@ -498,6 +499,54 @@
     </script>
 
     <div class="line" id="EducationSection">
+
+    </div>
+
+    <section class="timelinesection">
+
+        <div class="timeline">
+            <div class="timeline-item lefttime">
+                <div class="timeline-content">
+                    <div class="timeline-date">2024</div>
+                    <h3 class="timeline-title">Founded UniArchives</h3>
+                    <p class="timeline-description">I co-founded UniArchives with three colleagues to transform academic
+                        resource access and pioneer a decentralized learning platform, shaping the next era of higher
+                        education.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <div class="timeline-date">2024</div>
+                    <h3 class="timeline-title">Interned at the Islamic International Arab Bank</h3>
+                    <p class="timeline-description">Completed an internship across 11 IT departments, gaining hands-on
+                        experience in essential IT operations and insights into managing secure, efficient, and
+                        compliant systems within a financial institution.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+
+        function revealItemsOnScroll() {
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            const windowHeight = window.innerHeight;
+
+            timelineItems.forEach(item => {
+                const itemPosition = item.getBoundingClientRect().top;
+
+                if (itemPosition < windowHeight - 50) {
+                    item.classList.add('reveal');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', revealItemsOnScroll);
+        window.addEventListener('load', revealItemsOnScroll);
+    </script>
+
+    <div class="line3" id="EducationSection">
 
     </div>
 

@@ -1,0 +1,122 @@
+.timelinesection {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: blueviolet;
+}
+
+.timeline {
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    background: blueviolet;
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 40px;
+    color: #e0e0e0;
+    transition: background-color 0.3s;
+    opacity: 0;
+    transform: translateY(20px);
+    text-align: justify;
+}
+
+.timeline-item.lefttime {
+    left: -30%;
+    z-index: 100;
+}
+
+.timeline-item.right {
+    left: 50%;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    width: 12px;
+    height: 12px;
+    background: blueviolet;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px #1e1e1e;
+}
+
+.timeline-item.lefttime::after {
+    right: -21px;
+}
+
+.timeline-item.right::after {
+    left: -21px;
+}
+
+.timeline-content {
+    padding: 10px 20px;
+}
+
+.timeline-date {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.timeline-title {
+    font-family: "ekors";
+    font-size: 1.25rem;
+    background: blueviolet;
+    margin-top: 5px;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-align: left;
+}
+
+.timeline-description {
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .timeline-item {
+        width: 100%;
+        left: 0 !important;
+    }
+
+    .timeline-item::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/* Reveal effect */
+.reveal {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
