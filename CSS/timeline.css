@@ -6,7 +6,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 8%;
   }
+
+#timelineTitle{
+    
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 20px) !important;
+  z-index: 100;
+  opacity: 0;
+}
 
 .theme-toggle {
     position: absolute;
@@ -82,6 +93,7 @@
 }
 
 .timeline-date {
+    font-family: "ekors";
     font-size: 0.85rem;
     color: #888;
 }
@@ -173,7 +185,12 @@
 
 /* Reveal effect */
 .reveal {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 1 !important;
+    transform: translateY(0) !important;
     transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.revealtitle{
+    opacity: 1 !important;
+    transition: opacity 0.5s ease, transform 0.5s ease !important;
 }

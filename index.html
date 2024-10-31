@@ -71,7 +71,8 @@
     <div class="navbar" id="navbar">
         <!-- navigation links here -->
         <div class="top-links">
-            <a class="scroll-to" data-target="EducationSection">My education</a>
+            <a class="scroll-to" data-target="timelinesection">My Timeline</a>
+            <a class="scroll-to" data-target="EducationSection">My Education</a>
             <a class="scroll-to" data-target="SkillsAndContactSection">Let's have a talk!</a>
             <a href="CV.pdf" download>Resume/CV</a>
         </div>
@@ -498,11 +499,14 @@
 
     </script>
 
-    <div class="line" id="EducationSection">
+
+    <div class="line" id="timelinesection">
 
     </div>
 
     <section class="timelinesection">
+
+        <h1 id="timelineTitle">Timeline</h1>
 
         <div class="timeline">
             <div class="timeline-item lefttime">
@@ -531,6 +535,7 @@
 
         function revealItemsOnScroll() {
             const timelineItems = document.querySelectorAll('.timeline-item');
+            const timelineTitle = document.getElementById('timelineTitle');
             const windowHeight = window.innerHeight;
 
             timelineItems.forEach(item => {
@@ -540,6 +545,10 @@
                     item.classList.add('reveal');
                 }
             });
+            const titlePosition = timelineTitle.getBoundingClientRect().top;
+            if (titlePosition < windowHeight - 50) {
+                timelineTitle.classList.add('revealtitle');
+            }
         }
 
         window.addEventListener('scroll', revealItemsOnScroll);
