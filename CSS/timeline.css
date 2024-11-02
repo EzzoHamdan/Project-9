@@ -61,12 +61,12 @@
 }
 
 .timeline-item.lefttime {
-    left: -30%;
+    left: -29%;
     z-index: 100;
 }
 
 .timeline-item.right {
-    left: 50%;
+    left: 49%;
 }
 
 .timeline-item::after {
@@ -81,11 +81,11 @@
 }
 
 .timeline-item.lefttime::after {
-    right: -21px;
+    right: -25.5px;
 }
 
 .timeline-item.right::after {
-    left: -21px;
+    left: -25.5px;
 }
 
 .timeline-content {
