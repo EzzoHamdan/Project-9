@@ -194,3 +194,28 @@
     opacity: 1 !important;
     transition: opacity 0.5s ease, transform 0.5s ease !important;
 }
+
+
+
+
+
+
+
+
+/* Styling each raindrop */
+.raindrop {
+    position: absolute;
+    bottom: 100%; /* Start above the screen */
+    width: 2px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.4);
+    animation: fall linear infinite;
+    opacity: 0.8;
+    filter: blur(1px);
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}

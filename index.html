@@ -6,7 +6,7 @@
     <meta charset="UTF-8"> <!-- Character encoding set to UTF-8 -->
     <link rel="shortcut icon" href="Icons/logo.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive viewport settings -->
-    <title>Project-9</title> 
+    <title>Project-9</title>
 
     <link rel="stylesheet" href="CSS/Styles.css">
     <link rel="stylesheet" href="CSS/Layout.css">
@@ -67,7 +67,7 @@
     <audio id="repeat-audio" src="Media/Filaments.mp3" preload="auto" autoplay loop></audio>
 
     <div class="navbar" id="navbar">
-       
+
         <div class="top-links">
             <a class="scroll-to" data-target="timelinesection">My Timeline</a>
             <a class="scroll-to" data-target="EducationSection">My Education</a>
@@ -502,7 +502,7 @@
 
     </div>
 
-    <section class="timelinesection">
+    <section id="rain-container" class="timelinesection">
 
         <h1 id="timelineTitle">Timeline</h1>
 
@@ -530,6 +530,22 @@
     </section>
 
     <script>
+
+        const rainContainer = document.getElementById('rain-container');
+        const raindropCount = 100; // Adjust this number for more or less rain
+
+        for (let i = 0; i < raindropCount; i++) {
+            const raindrop = document.createElement('div');
+            raindrop.classList.add('raindrop');
+
+            // Randomizing the position and animation duration
+            raindrop.style.left = `${Math.random() * 100}vw`;
+            raindrop.style.animationDuration = `${Math.random() * 1 + 0.75}s`;
+            raindrop.style.animationDelay = `${Math.random() * 2}s`;
+
+            rainContainer.appendChild(raindrop);
+        }
+
 
         function revealItemsOnScroll() {
             const timelineItems = document.querySelectorAll('.timeline-item');
