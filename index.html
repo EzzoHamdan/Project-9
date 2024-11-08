@@ -507,9 +507,20 @@
         <h1 id="timelineTitle">Timeline</h1>
 
         <div class="timeline">
+
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <div class="timeline-date">Oct 2024 - Feb 2025</div>
+                    <h3 class="timeline-title">IT Team Lead at UniArchives</h3>
+                    <p class="timeline-description">I spearheaded strategic planning and managed project progress to ensure
+                        alignment with our goals and timelines. My job encompassed oversight of both frontend and backend
+                        development, along with conceptual initiatives.</p>
+                </div>
+            </div>
+
             <div class="timeline-item lefttime">
                 <div class="timeline-content">
-                    <div class="timeline-date">2024</div>
+                    <div class="timeline-date">Oct 2024 - Present</div>
                     <h3 class="timeline-title">Founded UniArchives</h3>
                     <p class="timeline-description">I co-founded UniArchives with three colleagues to transform academic
                         resource access and pioneer a decentralized learning platform, shaping the next era of higher
@@ -519,7 +530,7 @@
 
             <div class="timeline-item right">
                 <div class="timeline-content">
-                    <div class="timeline-date">2024</div>
+                    <div class="timeline-date">Aug 2024 - Sep 2024</div>
                     <h3 class="timeline-title">Interned at the Islamic International Arab Bank</h3>
                     <p class="timeline-description">Completed an internship across 11 IT departments, gaining hands-on
                         experience in essential IT operations and insights into managing secure, efficient, and
@@ -531,20 +542,21 @@
 
     <script>
 
-        const rainContainer = document.getElementById('rain-container');
-        const raindropCount = 100; // Adjust this number for more or less rain
+const rainContainer = document.getElementById('rain-container');
+const raindropCount = 100; // Adjust this number for more or less rain
 
-        for (let i = 0; i < raindropCount; i++) {
-            const raindrop = document.createElement('div');
-            raindrop.classList.add('raindrop');
+for (let i = 0; i < raindropCount; i++) {
+    const raindrop = document.createElement('div');
+    raindrop.classList.add('raindrop');
 
-            // Randomizing the position and animation duration
-            raindrop.style.left = `${Math.random() * 100}vw`;
-            raindrop.style.animationDuration = `${Math.random() * 1 + 0.75}s`;
-            raindrop.style.animationDelay = `${Math.random() * 2}s`;
+    // Randomizing position and animation duration
+    raindrop.style.left = `${Math.random() * 100}vw`;
+    raindrop.style.animationDuration = `${Math.random() * 1 + 1.75}s`;
+    raindrop.style.animationDelay = `${Math.random() * 2}s`;
 
-            rainContainer.appendChild(raindrop);
-        }
+    rainContainer.appendChild(raindrop);
+}
+
 
 
         function revealItemsOnScroll() {

@@ -13,7 +13,7 @@
     
   position: absolute;
   left: 50%;
-  top: 0;
+  top: 3%;
   transform: translate(-50%, 20px) !important;
   z-index: 100;
   opacity: 0;
@@ -205,7 +205,7 @@
 /* Styling each raindrop */
 .raindrop {
     position: absolute;
-    bottom: 100%; /* Start above the screen */
+    top: 0;
     width: 2px;
     height: 60px;
     background: rgba(255, 255, 255, 0.4);
@@ -216,6 +216,6 @@
 
 @keyframes fall {
     to {
-        transform: translateY(100vh);
+        transform: translateY(175vh);
     }
 }
