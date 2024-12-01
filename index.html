@@ -90,15 +90,18 @@
 
 
     <div id="featuredw" class="work slide-down">
-        <h1>Featured projects</h1>
-        <p>Showcased projects were created either as part of university coursework or solely for the purposes
-            of personal learning and professional development.</p>
-
+        <h1>Projects</h1>
+        <div class="button-container">
+            <button class="category-btn" onclick="filterProjects('featured')">Featured Projects</button>
+            <button class="category-btn" onclick="filterProjects('all')">All Projects</button>
+        </div>
     </div>
+
+
 
     <div id="featuredc" class="carousel slide-down">
         <div class="slide-container">
-            <div class="slide">
+            <div class="slide" data-category="featured">
                 <h2>Project-9</h2>
                 <p>Ma pièce de résistance. Project-9 stands as a cornerstone of my development journey. I built a fully
                     functional and dynamic portfolio from the ground up using vanilla HTML, CSS, and JavaScript. This
@@ -138,7 +141,12 @@
                     </div>
                 </div>
             </div>
+            
             <div class="slide">
+                <div class="badge">
+                    <img src="Icons/aau-logo.png" alt="AAU Logo">
+                    <span>A University Course Project</span>
+                </div>
                 <h2>Find the Shipwreck</h2>
                 <p>The 'Find the Shipwreck' game was created as a terminal-based project to demonstrate my proficiency
                     in Data Structures during my first semester of sophomore year. It showcases core concepts learned in
@@ -171,9 +179,14 @@
                 </div>
             </div>
             <div class="slide">
+                <div class="badge">
+                    <img src="Icons/aau-logo.png" alt="AAU Logo">
+                    <span>A University Course Project</span>
+                </div>
                 <h2>Hotatouille</h2>
                 <p>Hotatouille was developed as an interactive application to showcase my proficiency in project
-                    development for the Visual Programming course I took during my second semester of sophomore year. The
+                    development for the Visual Programming course I took during my second semester of sophomore year.
+                    The
                     project was a practical demonstration of my understanding of core concepts of visual programming,
                     allowing users to browse hotels and make reservations.
                 </p>
@@ -203,7 +216,11 @@
                     </div>
                 </div>
             </div>
-            <div class="slide">
+            <div class="slide" data-category="featured">
+                <div class="badge">
+                    <img src="Icons/aau-logo.png" alt="AAU Logo">
+                    <span>A University Course Project</span>
+                </div>
                 <h2>University Gate</h2>
                 <p>The 'University Gate' project was created as a university webpage for the Web Application
                     Development
@@ -248,7 +265,7 @@
                     </div>
                 </div>
             </div>
-            <div class="slide">
+            <div class="slide" data-category="featured">
                 <h2>Basic Todo App</h2>
                 <p>'Basic Todo App' is a simple to-do list application created using React, TailwindCSS, and TypeScript.
                     This project serves as a learning experience for React development, showcasing fundamental concepts
@@ -287,7 +304,7 @@
                     </div>
                 </div>
             </div>
-            <div class="slide">
+            <div class="slide" data-category="featured">
                 <h2>Modern Authoring for Dynamic Assignment and Design of Cascading Style Sheets 'MADADCSS'</h2>
                 <p>The 'MADADCSS' project is an innovative approach to CSS management that
                     aims to revolutionize styling. It utilizes Node.js and Express.js to improve performance and
@@ -332,7 +349,11 @@
                 </div>
             </div>
 
-            <div class="slide">
+            <div class="slide" data-category="featured">
+                <div class="badge">
+                    <img src="Icons/Unilogo.png" alt="AAU Logo">
+                    <span>In Association with AAU</span>
+                </div>
                 <h2>UniArchives</h2>
                 <p>I co-founded UniArchives with three colleagues, united by a vision to transform access to academic
                     resources and shape the next era of higher education. Our goal is to create the world's first
@@ -357,23 +378,48 @@
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dotnetcore/dotnetcore-original.svg"
                             width="50" height="50" />
 
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg"
-                            width="50" height="50" />
-
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg"
                             width="50" height="50" />
 
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg"
                             width="50" height="50" />
 
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg"
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <h2>ScreenSurfer</h2>
+                <p>Python script that opens a specified website in fullscreen mode after detecting inactivity on the
+                    user's computer.
+                </p>
+                <div class="worklink">
+
+                    <a class="Btn" href="https://github.com/EzzoHamdan/ScreenSurfer">
+                        <span class="picContainer">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" />
+                        </span>
+                        <span class="BG"></span>
+
+                    </a>
+                    <!--
+                    <a href="https://github.com/EzzoHamdan/ShipGame"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+                            width="50" height="50" /></a>-->
+
+                </div>
+                <div class="made-with">
+                    <h4>Made with:</h4>
+                    <div class="made-with-icons">
+
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
                             width="50" height="50" />
 
                     </div>
                 </div>
             </div>
 
-            <div class="slide">
+            <div class="slide" data-category="featured">
                 <h2>CSS Open Source Creative Solutions</h2>
                 <p>'CSS Open Source Creative Solutions' is currently under development and will be showcased once
                     completed. Stay tuned!
@@ -451,8 +497,8 @@
 
 
         </div>
-        <button class="prev" onclick="prevSlide()">&#10094;</button>
-        <button class="next" onclick="nextSlide()">&#10095;</button>
+        <button class="slides-button prev" onclick="prevSlide()">&#10094;</button>
+        <button class="slides-button next" onclick="nextSlide()">&#10095;</button>
     </div>
 
 
