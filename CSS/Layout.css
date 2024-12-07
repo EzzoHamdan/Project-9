@@ -165,7 +165,7 @@ li:before {
 .work {
   opacity: 0;
   position: absolute;
-  top: 140%;
+  top: 135%;
   left: 50%;
   transform: translateX(-50%) !important;
   z-index: 10;

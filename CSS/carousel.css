@@ -2,13 +2,14 @@
     opacity: 0;
     width: 100%;
     max-width: 800px;
-    margin: 50px auto;
+    padding-top: 25px;
     overflow: hidden;
     position: absolute;
     top: 170%;
     left: 50%;
     transform: translateX(-50%);
     z-index: 2;
+    height: auto; 
 }
 
 .slide-container {
