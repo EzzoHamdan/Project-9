@@ -458,6 +458,20 @@ li:before {
   .made-with-icons img:hover {
     transform: scale(1);
   }
+
+  .Btn {
+    width: 40px !important;
+    height: 40px !important;
+  }
+  
+  .made-with-icons img {
+    max-width: 40px !important;
+  }
+
+  .picContainer {
+    max-width: 40px !important;
+    height: auto;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -471,6 +485,20 @@ li:before {
 
   .accessport {
     top: 200px;
+  }
+
+  .Btn {
+    width: 30px !important;
+    height: 30px !important;
+  }
+  
+  .made-with-icons img {
+    max-width: 30px !important;
+  }
+
+  .picContainer {
+    max-width: 30px !important;
+    height: auto;
   }
 
   @keyframes up-and-down {
@@ -536,13 +564,17 @@ li:before {
     font-size: 0.6rem;
   }
 
+  .Btn {
+    width: 25px !important;
+    height: 25px !important;
+  }
+  
   .made-with-icons img {
-    max-width: 35px !important;
+    max-width: 25px !important;
   }
 
-  .worklink img {
-    margin-top: 10px;
-    max-width: 35px !important;
+  .picContainer {
+    max-width: 25px !important;
     height: auto;
   }
 }
