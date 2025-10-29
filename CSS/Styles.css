@@ -347,7 +347,7 @@ video {
 
 .sqrleft {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   /* 4 columns with equal width */
   gap: 20px;
   /* Spacing between images */
@@ -360,7 +360,7 @@ video {
 }
 
 .sqrleft img {
-  width: 100%;
+  width: 90%;
   height: auto;
 }
 /*

@@ -231,7 +231,7 @@ li:before {
 @media screen and (max-width: 1300px) {
   .sqrleft {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     list-style: none;
     gap: 0;
     padding: 0% 5%;
@@ -321,12 +321,12 @@ li:before {
   }
 
   .sqrleft {
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     padding: 0%;
   }
 
   .sqrleft img {
-    width: 100%;
+    width: 80%;
   }
 
   .square {
