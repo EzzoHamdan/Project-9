@@ -1,23 +1,33 @@
-window.addEventListener('scroll', function () {
+// Throttle function for better performance
+function throttleNav(func, limit) {
+  let inThrottle;
+  return function() {
+    const args = arguments;
+    const context = this;
+    if (!inThrottle) {
+      func.apply(context, args);
+      inThrottle = true;
+      setTimeout(() => inThrottle = false, limit);
+    }
+  }
+}
+
+// Throttled scroll handler for navbar (runs max once every 100ms)
+const handleNavScroll = throttleNav(function () {
   var scrollPos = window.scrollY;
   const featuredElement = document.getElementById("featuredw");
   const lastLine = document.getElementById("lastLine");
-  //const root = document.documentElement;
 
   if (scrollPos < featuredElement.offsetTop * 0.75) {
     makeNavHidden();
   } else if (scrollPos > lastLine.offsetTop * 0.95) {
-    //setHoverAlpha(0.75);
     makeNavHidden();
   } else {
-    //setHoverAlpha(0.75);
     makeNavVisible();
   }
+}, 100);
 
-  //function setHoverAlpha(value) {
-  //  root.style.setProperty('--hover-alpha', value);
-  //}
-});
+window.addEventListener('scroll', handleNavScroll);
 
 function makeNavVisible() {
   navbar.style.visibility = 'visible';

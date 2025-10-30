@@ -26,26 +26,31 @@
 @font-face {
   font-family: "astron-boy";
   src: url("astron boy video.otf") format("opentype");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "ekors";
   src: url("EkorsNonCommercial.otf") format("opentype");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "echo";
   src: url("ECHOSHIFT.otf") format("opentype");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "the-off-set";
   src: url("OffsettDemoRegular.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "pw-world";
   src: url("PWWORLDSEND2112.ttf") format("truetype");
+  font-display: swap;
 }
 
 #text {
@@ -453,6 +458,7 @@ h2 {
   height: 100%;
   object-fit: cover;
   pointer-events: none;
+  will-change: transform; /* Optimize for parallax animations */
 }
 
 .normalsection #moon {
@@ -482,6 +488,7 @@ h2 {
     0 0 0 8px rgba(255, 255, 255, 0.1), 0 0 20px rgb(255, 255, 255);
   opacity: 0;
   z-index: 1;
+  will-change: transform, opacity; /* Optimize for particle animations */
 }
 
 .spanParticle::before {

@@ -1,3 +1,7 @@
+// Object pool for particle reuse
+const particlePool = [];
+const POOL_SIZE = 30; // Maximum particles to keep in pool
+
 // Function to check if the user is within 200vh
 function isWithin200vh() {
   const windowHeight = window.innerHeight;
@@ -5,11 +9,29 @@ function isWithin200vh() {
   return scrollPosition < 1.5 * windowHeight;
 }
 
-function createSpan() {
-  // Create a new <span> element
+// Get or create a span element from pool
+function getSpanFromPool() {
+  if (particlePool.length > 0) {
+    return particlePool.pop();
+  }
   const span = document.createElement("span");
-  // Add the CSS class to the <span> element
   span.classList.add("spanParticle");
+  return span;
+}
+
+// Return span to pool for reuse
+function returnSpanToPool(span) {
+  if (particlePool.length < POOL_SIZE) {
+    span.style.animation = 'none';
+    particlePool.push(span);
+  } else {
+    span.remove();
+  }
+}
+
+function createSpan() {
+  // Get a span from pool instead of creating new one
+  const span = getSpanFromPool();
 
   // Generate a random color
   const color = getRandomColor();
@@ -25,11 +47,17 @@ function createSpan() {
   span.style.animation = `animate ${duration - 1}s linear`;
 
   // Append the <span> element to a container with id "particle-container"
-  document.getElementById("particle-container").appendChild(span);
+  const container = document.getElementById("particle-container");
+  if (!span.parentNode) {
+    container.appendChild(span);
+  }
 
-  // Remove the <span> element after the animation duration
+  // Return the <span> element to pool after the animation duration
   setTimeout(() => {
-    span.remove();
+    if (span.parentNode) {
+      span.parentNode.removeChild(span);
+    }
+    returnSpanToPool(span);
   }, duration * 1000);
 }
 
@@ -37,7 +65,7 @@ setInterval(() => {
   if (isWithin200vh()) {
     createSpan();
   }
-}, 75);
+}, 150);
 
 // Set a random position for the given element
 function setRandomPosition(element) {

@@ -7,7 +7,12 @@
     <link rel="shortcut icon" href="Icons/logo.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive viewport settings -->
 
-    <script type="text/javascript">
+    <!-- Preconnect to external CDNs for faster resource loading -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://cdn.custom-cursor.com" crossorigin>
+    <link rel="preconnect" href="https://www.clarity.ms" crossorigin>
+
+    <script type="text/javascript" async>
         (function (c, l, a, r, i, t, y) {
             c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
             t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
@@ -748,7 +753,20 @@
         let road = document.getElementById('road');
         let text = document.getElementById('text');
 
-        window.addEventListener('scroll', function () {
+        // Throttle function for better performance
+        function throttleParallax(func, limit) {
+            let inThrottle;
+            return function() {
+                if (!inThrottle) {
+                    func.apply(this, arguments);
+                    inThrottle = true;
+                    setTimeout(() => inThrottle = false, limit);
+                }
+            }
+        }
+
+        // Parallax effect with throttling (runs max once every 16ms ~60fps)
+        const handleParallax = throttleParallax(function() {
             var value = window.scrollY;
             var tvalue = value - 1000;
             sky.style.top = -value * 0.10 + 'px';
@@ -756,8 +774,9 @@
             mount.style.top = -value * 0.13 + 'px';
             road.style.top = -value * 0.05 + 'px';
             text.style.bottom = tvalue * 0.5 + 'px';
+        }, 16);
 
-        });
+        window.addEventListener('scroll', handleParallax);
 
     </script>
 
@@ -835,7 +854,7 @@
     <script>
 
         const rainContainer = document.getElementById('rain-container');
-        const raindropCount = 100; // Adjust this number for more or less rain
+        const raindropCount = 60; // Reduced from 100 for better performance
 
         for (let i = 0; i < raindropCount; i++) {
             const raindrop = document.createElement('div');
@@ -921,7 +940,7 @@
 
     <section class="sectiond">
 
-        <video preload="auto" autoplay loop muted>
+        <video preload="auto" autoplay loop muted loading="lazy">
             <source src="Media/glitch.mp4" type="video/mp4">
 
         </video>
